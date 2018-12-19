@@ -39,4 +39,4 @@
 
 
 ## 私密小技巧
-1. [ REM适配 ](https://yued-fe.github.io/YFE-BP/tips/Rem/index.html)
+1. [ 移动端REM适配 ](https://yued-fe.github.io/YFE-BP/tips/Rem/index.html)
