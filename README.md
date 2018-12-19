@@ -21,7 +21,7 @@
 4. [Isobar](http://coderlmn.github.io/code-standards/)
 5. [网易](http://nec.netease.com/standard)
 
-### 组件
+## 组件
 
 1. [Button 「 按钮 」](https://yued-fe.github.io/YFE-BP/components/Button/html/index.html)
 2. Dialog 「 弹窗 」
@@ -31,7 +31,7 @@
 6. Img 「 图片 」
 7. Form 「 表单 」
 
-### 布局
+## 布局
 1. 左右布局
 2. 列表布局
 3. 删格布局
