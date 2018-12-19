@@ -17,11 +17,9 @@
 
 1. [BootStrap](https://codeguide.bootcss.com/)
 2. [@AlloyTeam](http://alloyteam.github.io/CodeGuide/)
-3. [@AlloyTeam-materliu](https://materliu.github.io/code-guide/)
-4. [@AlloyTeam](http://alloyteam.github.io/CodeGuide/)
-5. [Airbnb JavaScript 编码规范（简体中文版）](https://github.com/yuche/javascript#table-of-contents)
-6. [Isobar](http://coderlmn.github.io/code-standards/)
-7. [网易](http://nec.netease.com/standard)
+3. [Airbnb JavaScript 编码规范（简体中文版）](https://github.com/yuche/javascript#table-of-contents)
+4. [Isobar](http://coderlmn.github.io/code-standards/)
+5. [网易](http://nec.netease.com/standard)
 
 ### 组件
 
