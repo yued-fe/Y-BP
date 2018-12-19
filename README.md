@@ -25,7 +25,7 @@
 
 ### 组件
 
-1. [Button 「 按钮 」](https://github.com/yued-fe/YFE-BP/issues/9)
+1. [Button 「 按钮 」](https://yued-fe.github.io/YFE-BP/components/Button/html/index.html)
 2. Dialog 「 弹窗 」
 3. Toast 「 轻提示 」
 4. Tooltip 「 气泡提示 」
