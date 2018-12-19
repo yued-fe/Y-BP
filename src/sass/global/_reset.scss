@@ -1,0 +1,152 @@
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/*! minireset.css v0.0.3 | MIT License | github.com/jgthms/minireset.css */
+
+/*! ress.css • v1.2.2 | MIT License | github.com/filipelinhares/ress */
+
+/* 移除margin和padding */
+html, body, p, ol, ul, li, fieldset, table, form, button, input, optgroup, select, textarea, legend, pre, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, strong, small, em, i, button, input, optgroup, select, textarea {
+  font-size: 100%;
+  font-weight: normal;
+  font-style: normal;
+  font-family: inherit;
+}
+
+textarea, select, button, input {
+  box-sizing: border-box;
+}
+
+/* 去掉列表默认的样式 */
+ul, ol {
+  list-style: none;
+}
+
+/* 去掉表格默认的边线 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/**
+ * 1. Remove gaps in links underline in iOS 8+ and Safari 8+
+ * 2. 移除IE10 的灰色背景
+ */
+a {
+  -webkit-text-decoration-skip: objects;
+  background-color: transparent;
+}
+
+/**
+ * Remove the outline on focused links when they are also active or hovered
+ * in all browsers (opinionated).
+ */
+a:active, a:hover {
+  outline-width: 0;
+}
+
+/* Remove border when inside `a` element in IE 8/9/10 */
+img {
+  border-style: none;
+}
+
+/* Address `overflow` set to `hidden` in IE 8/9/10/11 */
+button, input {
+  overflow: visible;
+}
+
+/* 修复在苹果系统中，按钮显示不正确的问题 */
+button {
+  -webkit-appearance: button;
+}
+
+/* 去掉在IE 10+ 的纵向滚动条*/
+textarea {
+  overflow: auto;
+}
+
+/* 设置 placeholder 的颜色*/
+input::-moz-focus-inner {
+  border: none;
+  padding: 0;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  color: #CCC !important;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #CCC !important;
+}
+
+/**
+* 1. Add the correct box sizing in IE 10.
+* 2. Remove the padding in IE 10.
+*/
+[type="checkbox"], [type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+* Correct the cursor style of increment and decrement buttons in Chrome.
+*/
+[type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+* 1. Correct the odd appearance in Chrome and Safari.
+* 2. Correct the outline style in Safari.
+*/
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/* Safari 8 */
+[type="search"]::-webkit-search-cancel-button, [type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* 通过 hidden 属性隐藏元素 */
+[hidden] {
+  display: none;
+}
+
+/* 通过 disabled 设置手型 */
+[disabled] {
+  cursor: default;
+}
+
+/**
+ * [让svg 可以像字体图标一样通过字号设置大小 ]
+ */
+svg {
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  display: inline-block;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+  pointer-events: none;
+}
+
+/**
+ * [让 i 标签作为默认的图标容器]
+ */
+i {
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  text-align: center;
+}

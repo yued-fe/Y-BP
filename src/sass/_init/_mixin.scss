@@ -1,0 +1,122 @@
+/**
+ * @author ziven
+ * @desc base mixin 
+ */
+
+
+// 设置当前单位
+@function unit($value) {
+  @return $value / 16 * 1rem;
+}
+
+// 添加新字体
+@mixin font-face($name, $path) {
+	@font-face {
+		font-family: $name;
+		src: url('#{$path}.eot');
+		src: url('#{$path}.eot?#font-spider') format('embedded-opentype'), url('#{$path}.woff') format('woff'), url('#{$path}.ttf') format('truetype'), url('#{$path}.svg') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}
+}
+
+// 清楚浮动
+@mixin clearfix() {
+	&:after {
+		display: table;
+		content: '';
+		clear: both;
+	}
+	*zoom: 1;
+}
+// 左右居中
+@mixin auto() {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// 撑开容器剩余部分
+@mixin cell() {
+	display: table-cell;
+	*display: inline-block;
+	width: 2000px;
+	*width: auto;
+}
+
+// 超出点点点
+@mixin ell() {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+// 不影响seo的隐藏
+@mixin hide() {
+	position: absolute;
+	clip: rect(0 0 0 0);
+}
+
+// 多行文本点点点
+@mixin ellrows($row) {
+  display: -webkit-box;
+  overflow: hidden;
+  word-wrap: break-word;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $row;
+}
+
+
+// 创建基于 ACSS 的 4 个方向的外间距
+@mixin acss-margin($gutters) {
+  @each $gutter in $gutters {
+    .mt#{$gutter} {
+      margin-top: $gutter*1px;
+    }
+    .mr#{$gutter} {
+      margin-right: $gutter*1px;
+    }
+    .mb#{$gutter} {
+      margin-bottom: $gutter*1px;
+    }
+    .ml#{$gutter} {
+      margin-left: $gutter*1px;
+    }
+  }
+}
+
+// 创建基于 ACSS 的 4 个方向的内间距
+@mixin acss-padding($gutters) {
+  @each $gutter in $gutters {
+    .pt#{$gutter} {
+      padding-top: $gutter*1px;
+    }
+    .pr#{$gutter} {
+      padding-right: $gutter*1px;
+    }
+    .pb#{$gutter} {
+      padding-bottom: $gutter*1px;
+    }
+    .pl#{$gutter} {
+      padding-left: $gutter*1px;
+    }
+  }
+}
+
+// 创建基于 ACSS的 多个字号
+@mixin acss-font-size($fontSizes) {
+  @each $fontSize in $fontSizes {
+    .fs#{$fontSize} {
+      font-size: unit($fontSize);
+    }
+  }
+}
+
+// 创建基于 ACSS的 多个行高
+@mixin acss-line-height($fontSizes) {
+  @each $fontSize in $fontSizes {
+    .lh#{$fontSize} {
+      line-height: unit($fontSize);
+    }
+  }
+}
+

@@ -1,0 +1,18 @@
+@import '_var.scss';
+.btn:disabled, .btn._disabled {
+	opacity: 0.5;
+	pointer-events: none;
+	cursor: not-allowed;
+}
+
+.btn._hover, .btn:hover{
+		
+}
+
+.btn._focus, .btn:focus{
+
+}
+
+.btn._active, .btn:active{
+
+}

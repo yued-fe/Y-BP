@@ -1,0 +1,27 @@
+@import '_var.scss';
+
+.btn._link, .btn._ghost {
+	background-color: transparent;
+
+	&::first-line {
+		color: inherit;
+	}
+
+}
+
+.btn._ghost {
+	border-color: initial;
+}
+
+.btn._capsule {
+	border-radius: 100px;
+}
+
+
+.btn._block {
+	padding-left: 0;
+	padding-right: 0;
+	width: 100%;
+}
+
+

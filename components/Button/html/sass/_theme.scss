@@ -1,0 +1,69 @@
+@import '_var.scss';
+
+.btn, .btn._primary {
+	background-color: $c_primary;
+	color: $c_primary;
+
+	&:hover {
+		background-color: darken($c_primary, 10%);
+		color: darken($c_primary, 10%);
+	}
+
+}
+
+.btn._secondary {
+	background-color: $c_secondary;
+	color: $c_secondary;
+
+	&:hover {
+		background-color: darken($c_secondary, 10%);
+		color: darken($c_secondary, 10%);
+	}
+
+}
+
+.btn._warning {
+	background-color: $c_warning;
+	color: $c_warning;
+
+	&:hover {
+		background-color: darken($c_warning, 10%);
+		color: darken($c_warning, 10%);
+	}
+
+}
+
+.btn._success {
+	background-color: $c_success;
+	color: $c_success;
+
+	&:hover {
+		background-color: darken($c_success, 10%);
+		color: darken($c_success, 10%);
+	}
+
+}
+
+.btn._danger {
+	background-color: $c_danger;
+	color: $c_danger;
+	&:hover {
+		background-color: darken($c_danger, 10%);
+		color: darken($c_danger, 10%);
+	}
+}
+
+.btn._dark {
+	background-color: $c_dark;
+	color: $c_dark;
+
+	&:hover {
+		background-color: darken($c_dark, 10%);
+		color: darken($c_dark, 10%);
+	}
+
+}
+
+.btn::first-line {
+	color: #fff;
+}

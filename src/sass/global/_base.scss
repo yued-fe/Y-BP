@@ -1,0 +1,23 @@
+/**
+ * [这里的名称请使用语义化的命名方式]
+ */
+
+@import '../_init/_init.scss';
+
+/* clip 方式隐藏元素 */
+.hide { @include hide; }
+
+/* block带宽度元素左右居中 */
+.auto { @include auto; }
+
+/* 清除浮动 */
+.clearfix { @include clearfix; }
+
+/* 单行点点点 */
+.ell { @include ell; }
+
+/* 两行点点点 */
+.ell2row { @include ellrows(2); }
+
+/* 用表格的方式撑满浮动之后的剩余空间 */
+.cell { @include cell; }

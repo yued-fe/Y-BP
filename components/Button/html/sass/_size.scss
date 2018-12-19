@@ -1,0 +1,27 @@
+@import '_var.scss';
+
+.btn{
+	height: 40px;
+	font-size: 16px;
+	line-height: 22px;
+	padding: 8px 16px;
+}
+
+.btn._large{
+	height: 48px;
+	font-size: 20px;
+	line-height: 30px;
+	padding: 8px 24px;
+}
+.btn._middle{
+	height: 32px;
+	font-size: 14px;
+	line-height: 22px;
+	padding: 4px 12px;
+}
+.btn._small{
+	height: 24px;
+	font-size: 12px;
+	line-height: 16px;
+	padding: 4px 8px;
+}
