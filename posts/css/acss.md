@@ -1,5 +1,4 @@
-
-## ACSS 「 原子化CSS 」
+# ACSS 「 原子化CSS 」
 
 原子组件库是一种极简，高效容易管理的组件库。
 
@@ -13,22 +12,22 @@
 4. 小数点用d（dot）表示  `.lh1d2{ line-height:1.2}`;
 
 
-### 使用方式
+## 使用方式
 
-#### 原生 HTML 中的使用
+### 原生 HTML 中的使用
 
 ```HTML
 <div class="pl16 pr16 pt16 pb16 tac c_000">
 	hello world!
 </div>
 ```
-#### CSS Module 中的使用
+### CSS Module 中的使用
 ```jsx
 <div className={`pl16 pr16 pt16 pb16 tac c_000`}>
 	hello world!
 </div>
 ```
-#### style component 中的使用
+### style component 中的使用
 
 ```jsx
 <div pl16 pr16 pt16 pb16 tac c_000>
@@ -37,7 +36,7 @@
 ```
 表示，`padding:16p 16px 16px 16px; text-align:center; color:#000;`
 
-### 推荐阅读
+## 推荐阅读
 
 1.  [「CSS思维」组件化VS原子化 ]( https://juejin.im/post/5b4063936fb9a04fb016b738 )
 2.  [ 如何管理 CSS “内裤” ]( https://juejin.im/post/5ba862d9f265da0ae472868a )
@@ -49,7 +48,7 @@
 8. [「英」Styling React](https://link.juejin.im/?target=https%3A%2F%2Fsurvivejs.com%2Freact%2Fadvanced-techniques%2Fstyling-react%2F) @SURVIVEJS；
 9. [「英」CSS最佳实践探讨](https://link.juejin.im/?target=https%3A%2F%2Fwww.smashingmagazine.com%2F2013%2F10%2Fchallenging-css-best-practices-atomic-approach%2F) - Atomic CSS @smashingmagazine；
 
-### 目录其它 CSS 最佳实践
+## 目录其它 CSS 最佳实践
 
 1. [CSS Variable「 参数 」](../css/variable) 
 2. [CSS Mixin 「 辅助方法 」](../css/mixin)
