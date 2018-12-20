@@ -366,9 +366,9 @@
             显示弹窗
           </button>
           <div id="dialogBottomJs" class="dialog-wrap _bottom _demo _on">
-            <a href="javascript:;" title="遮罩" class="dialog-mask"></a>
+            <a onclick="dialogBottomJs.classList.remove('_on');" href="javascript:;" title="遮罩" class="dialog-mask"></a>
             <div class="dialog">
-              <a href="javascript:;" title="关闭" class="dialog-close"
+              <a onclick="dialogBottomJs.classList.remove('_on');" href="javascript:;" title="关闭" class="dialog-close"
                 >&times;</a
               >
               <div class="dialog-hd">
@@ -395,9 +395,9 @@
             显示弹窗
           </button>
           <div id="dialogMiddleJs" class="dialog-wrap _middle _demo _on">
-            <a href="javascript:;" title="遮罩" class="dialog-mask"></a>
+            <a onclick="dialogMiddleJs.classList.remove('_on');" href="javascript:;" title="遮罩" class="dialog-mask"></a>
             <div class="dialog">
-              <a href="javascript:;" title="关闭" class="dialog-close">
+              <a onclick="dialogMiddleJs.classList.remove('_on');" href="javascript:;" title="关闭" class="dialog-close">
                 &times;
               </a>
               <div class="dialog-hd">
@@ -487,6 +487,6 @@
       </tr>
     </table>
 
-    <a href="./demo.html" title="查看Demo">查看Demo</a>  
+    <a href="./demo.html" title="查看Demo">查看Demo</a>
   </body>
 </html>
