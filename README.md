@@ -9,9 +9,9 @@
 
 ## 代码规范
 
-- [HTML 规范](https://github.com/yued-fe/YFE-BP/issues/6)
-- [CSS 规范](https://github.com/yued-fe/YFE-BP/issues/7)
-- [JS 规范](https://github.com/yued-fe/YFE-BP/issues/8)
+- [HTML 规范](./posts/styleguide/html)
+- [CSS 规范](./posts/styleguide/css)
+- [JS 规范](./posts/styleguide/js)
 
 ## 代码规范参考
 
