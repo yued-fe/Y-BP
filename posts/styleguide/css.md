@@ -1,3 +1,5 @@
+# CSS 最佳实践
+
 ## 目录结构
 
 ```less
@@ -22,11 +24,11 @@
 
 ## 基础代码
 
-1. [CSS Variable「 参数 」](https://github.com/yued-fe/FE-BP/issues/1) 
-2. [CSS Mixin 「 辅助方法 」](https://github.com/yued-fe/FE-BP/issues/2)
-3. [CSS Reset 「 样式重置 」](https://github.com/yued-fe/FE-BP/issues/3)
-4. [CSS Base 「 基础样式 」](https://github.com/yued-fe/FE-BP/issues/4)
-5. [ACSS 「 原子化CSS 」](https://github.com/yued-fe/FE-BP/issues/5)
+1. [CSS Variable「 参数 」](../css/variable) 
+2. [CSS Mixin 「 辅助方法 」](../css/mixin)
+3. [CSS Reset 「 样式重置 」](../css/reset)
+4. [CSS Base 「 基础样式 」](../css/base)
+5. [ACSS 「 原子化CSS 」](../css/acss)
 
 以上 5 个文件是我们对于 CSS 基础文件的拆分。
 
