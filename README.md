@@ -39,4 +39,4 @@
 
 
 ## 私密小技巧
-1. [ 移动端REM适配 ](https://yued-fe.github.io/YFE-BP/tips/Rem/index.html)
+1. [ 移动端REM适配 ](https://www.zhangxinxu.com/wordpress/2016/08/vw-viewport-responsive-layout-typography/)
