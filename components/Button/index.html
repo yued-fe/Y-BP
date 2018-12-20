@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>YFE-BP 按钮</title>
+    <style>
+      html {
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica,
+          Arial, sans-serif;          
+      }
+      style[contenteditable] {
+        display: block;
+        white-space: pre-line;
+        word-wrap: normal;
+        line-height: 1.5;
+      }
+      h3.demo-mod{
+          padding-top: 1em;
+      }
+      table.demo-mod {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;        
+      }
+      table.demo-mod td {
+        vertical-align: top;
+        padding: 0.5em;
+        border: 1px solid #333;
+      }
+      table.demo-mod td:first-child {
+        width: 200px;
+      }
+    </style>
+    <!-- <link rel="stylesheet" href="./css/index.css"> -->
+  </head>
+  <body>
+    <a href="/YFE-BP" title="YFE-BP 前端最佳实践"><h1>YFE-BP 前端最佳实践</h1></a>
+    <h2>按钮组件</h2>    
+    <p>对于组件，我们推荐的是和设计沟通达成一致之后，用更少的形态，适应更多的场景。</p>
+    <p>以下代码均可实时编辑，实时更新。</p>
+
+    <h3 id="base" class="demo-mod">按钮基础样式 <small>[_base.scss]</small></h3>
+    <p>按钮通常会用到的标签是 <code>button</code> 和 <code>a</code>。 </p>
+    <table class="demo-mod">
+      <tr>
+        <td><button class="btn">按钮</button></td>
+        <td>
+          <style contenteditable="true">
+            .btn {
+              display: inline-block; /* a 链接也有可能为 button 所以设置 inline-block 属性 */
+              text-align: center; /* 按钮文字居中 */
+              white-space: nowrap; /* 按钮文字不换行 */
+              vertical-align: middle; /* 按钮和文字混排的时候对齐方式 */
+              user-select: none; /* 去掉可以用鼠标选中按钮上的文字功能 */
+              box-sizing: border-box; /* 让padding 和 border 的宽度不影响按钮高度*/
+              border: none 0; /* 去掉按钮的默认边框 */
+              border-radius: 3px; /* 按钮圆角 */
+              cursor: pointer; /* 为非可选按钮的标签添加鼠标手型 */
+            }
+          </style>
+        </td>
+      </tr>
+    </table>
+
+    <h3 id="theme" class="demo-mod">按钮主题 <small>[_theme.scss]</small></h3>
+    <p>对于按钮主题的命名规则，这边直接借用 <a target="_blank" href="https://v4.bootcss.com/docs/4.0/components/buttons/">BootStrap</a> 的规则，而这也几乎是国际通用的拓展规则。</p>
+    <p>Bootstrap 是一个没有特定产品的通用基础框架，即使在按钮设计极致收敛的情况下，仍然有 "Primary | Secondary | Success | Danger | Warning | Info | Light | Dark" 八种。对于我们自己的产品来说，这么多的分类是非常不推荐的。我们推荐的是，用更少的主题适应更多的场景，要达到这一点，是需要多和设计师沟通的。</p>
+    <p>在<a target="_blank" href="https://github.com/yued-fe/FE-BP/issues/7">CSS规范</a>中有提到通过是用下滑线作为前缀的命名规则。在类似 React 和 VUE 的场景中我们推荐直接使用 props 去拓展组件 <code>&lt;Button primary /&gt;</code>。相应的可以使用 CSS 的属性选择器去设定样式，以保证一致性 <code>button[primary]{}</code>。</p>
+    <p>按钮的主题色，在实际开发中我们的颜色应该是基于全局的颜色参数去获取的。对于颜色<a target="_blank" href="https://github.com/yued-fe/FE-BP/issues/1">参数的命名</a>，我们推荐使用 <code>c_</code> 前缀。</p>
+    <table class="demo-mod">
+      <tr>
+        <td>
+          <button class="btn _primary">按钮 <code>[_primary]</code></button>
+          <p>我们让按钮的默认样式，就是 primary 的样式。这样不用每次在使用默认按钮的时候还要再添加 primary 属性。</p>
+          <p>对于 hover 状态的颜色变化，我们建议使用 less 或者 sass 的 darken 函数基于主颜色去处理。</p>
+        </td>
+        <td>
+          <style contenteditable="true">
+            .btn,
+            .btn._primary {
+              background-color: blue; /* $c_primary; */
+              color: blue; /* $c_primary; */
+            }
+            .btn:hover,
+            .btn._primary:hover {
+              background-color: #0000cc; /* darken($c_primary, 10%); */
+              color: #0000cc; /* darken($c_primary, 10%); */
+            }
+          </style>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button class="btn _warning">按钮 <code>[_warning]</code></button>
+        </td>
+        <td>
+          <style contenteditable="true">
+            .btn._warning {
+              background-color: yellow;
+              color: yellow;
+            }
+            .btn._warning:hover {
+              background-color: #cccc00;
+              color: #cccc00;
+            }
+          </style>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button class="btn _success">按钮 <code>[_success]</code></button>
+        </td>
+        <td>
+          <style contenteditable="true">
+            .btn._success {
+              background-color: green;
+              color: green;
+            }
+            .btn._success:hover {
+              background-color: #004d00;
+              color: #004d00;
+            }
+          </style>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button class="btn _danger">按钮 <code>[_danger]</code></button>
+        </td>
+        <td>
+          <style contenteditable="true">
+            .btn._danger {
+              background-color: red;
+              color: red;
+            }
+            .btn._danger:hover {
+              background-color: #cc0000;
+              color: #cc0000;
+            }
+          </style>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          来自的<a
+            href="https://www.zhangxinxu.com/wordpress/2016/11/development-ui-component-based-on-css-color/"
+            >张老师</a
+          >的小技巧
+        </td>
+        <td>
+          <style contenteditable="true">
+            .btn::first-line {
+              color: #fff;
+            }
+          </style>
+        </td>
+      </tr>
+    </table>
+
+    <h3 id="size" class="demo-mod">按钮大小 <small>[_size.scss]</small></h3>
+    <p>对于按钮大小的拓展我们使用了四种按钮大小。拓展建议通过类似衣服尺码 xs, xl 添加 x 的方式进行拓展 [_largex]。 </p>
+    <p>我们在大小的数量上和主题是一样的，建议使用更少的大小，适配更多的场景。</p>
+    <table class="demo-mod">
+      <tr>
+        <td><button class="btn">默认按钮</button></td>
+        <td>
+          <style contenteditable="true">
+            .btn {
+              height: 40px;
+              font-size: 16px;
+              line-height: 22px;
+              padding: 8px 16px;
+            }
+          </style>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button class="btn _large">大按钮 <code>[_large]</code></button>
+        </td>
+        <td>
+          <style contenteditable="true">
+            .btn._large {
+              height: 48px;
+              font-size: 20px;
+              line-height: 30px;
+              padding: 8px 24px;
+            }
+          </style>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button class="btn _middle">中号按钮 <code>[_middle]</code></button>
+        </td>
+        <td>
+          <style contenteditable="true">
+            .btn._middle {
+              height: 32px;
+              font-size: 14px;
+              line-height: 22px;
+              padding: 4px 12px;
+            }
+          </style>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button class="btn _small">小按钮 <code>[_small]</code></button>
+        </td>
+        <td>
+          <style contenteditable="true">
+            .btn._small {
+              height: 24px;
+              font-size: 12px;
+              line-height: 16px;
+              padding: 4px 8px;
+            }
+          </style>
+        </td>
+      </tr>
+    </table>
+
+    <h3 id="shape" class="demo-mod">按钮形态 <small>[_shape.scss]</small></h3>
+    <table class="demo-mod">
+      <tr>
+        <td>
+          <button class="btn _link">链接按钮 <code>[_link]</code></button>
+        </td>
+        <td>
+          <style contenteditable="true">
+            .btn._link {
+              background-color: transparent;
+            }
+            .btn._link::first-line {
+              color: inherit;
+            }
+          </style>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button class="btn _ghost">幽灵按钮 <code>[_ghost]</code></button>
+        </td>
+        <td>
+          <style contenteditable="true">
+            .btn._ghost {
+              background-color: transparent;
+              border: 1px solid;
+            }
+            .btn._ghost::first-line {
+              color: inherit;
+            }
+          </style>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button class="btn _capsule">胶囊按钮 <code>[_capsule]</code></button>
+        </td>
+        <td>
+          <style contenteditable="true">
+            .btn._capsule {
+              border-radius: 100px;
+            }
+          </style>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div style="width:300px;">
+            <button class="btn _block">行级按钮 <code>[_block]</code></button>
+          </div>
+        </td>
+        <td>
+          <style contenteditable="true">
+            .btn._block {
+              padding-left: 0;
+              padding-right: 0;
+              width: 100%;
+            }
+          </style>
+        </td>
+      </tr>
+    </table>
+
+    <h3 id="status" class="demo-mod">按钮状态 <small>[_status.scss]</small></h3>
+    <table class="demo-mod">
+      <tr>
+        <td><button disabled class="btn">禁用按钮[:disabled]</button></td>
+        <td>
+          <style contenteditable="true">
+            .btn:disabled,
+            .btn._disabled {
+              opacity: 0.5; /* 修改透明度 */
+              pointer-events: none; /* 用css的方式让元素不可被选中，不支持该属性的需要用 js 阻止事件提交 */
+              cursor: not-allowed; /* 修改鼠标手型为不允许 */
+            }
+          </style>
+        </td>
+      </tr>
+      <tr>
+        <td>
+            <button class="btn _hover">禁用鼠标移入[:hover]</button>
+            <p>在<a href="#theme">按钮主题</a>的部分有写 hover 的样式， 可以在右侧括号内尝试自定义</p>        
+        </td>
+        <td>
+          <style contenteditable="true">
+            .btn:hover,
+            .btn._hover {
+                /* 在此自定义 */      
+            }
+          </style>
+        </td>
+      </tr>
+      <tr>
+        <td><button class="btn _focus">禁用获取焦点[:focus]</button></td>
+        <td>
+          <style contenteditable="true">
+            .btn:focus,
+            .btn._focus {
+              /* 在此自定义 */
+            }
+          </style>
+        </td>
+      </tr>
+      <tr>
+        <td><button class="btn _active">禁用按下[:active]</button></td>
+        <td>
+          <style contenteditable="true">
+            .btn:active,
+            .btn._active {
+              /* 在此自定义 */
+            }
+          </style>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

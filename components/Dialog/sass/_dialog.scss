@@ -1,0 +1,21 @@
+@import "_var.scss";
+.dialog {
+  background-color: #fff;
+  position: relative;
+}
+/* 标题 */
+.dialog-title {
+  margin: 0;
+}
+/* header */
+.dialog-hd {
+  padding: 16px 16px 8px;
+}
+/* body */
+.dialog-bd {
+  padding: 8px 16px;
+}
+/* footer */
+.dialog-ft {
+  padding: 8px 16px 16px;
+}

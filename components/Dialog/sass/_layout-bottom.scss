@@ -1,0 +1,17 @@
+@import "_var.scss";
+/*====== 底部对齐弹窗*/
+.dialog-wrap._bottom .dialog {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  border-radius: 8px 8px 0 0;
+  /* 上滑动效 */
+  transform: translateY(50%);
+  transition: transform 200ms;
+}
+
+/*显示的时候上滑动*/
+.dialog-wrap._bottom._on .dialog {
+  transform: translateY(0);
+}

@@ -1,0 +1,133 @@
+@charset "UTF-8";
+.dialog-close {
+  width: 24px;
+  height: 24px;
+  font-size: 24px;
+  line-height: 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 100%;
+  color: #999;
+  user-select: none;
+  /*放到 .dialog 右上角*/
+  position: absolute;
+  top: 16px;
+  right: 16px; }
+
+.dialog-close:hover {
+  color: #333; }
+
+.dialog-close:active {
+  background-color: rgba(0, 0, 0, 0.2); }
+
+.dialog {
+  background-color: #fff;
+  position: relative; }
+
+/* 标题 */
+.dialog-title {
+  margin: 0; }
+
+/* header */
+.dialog-hd {
+  padding: 16px 16px 8px; }
+
+/* body */
+.dialog-bd {
+  padding: 8px 16px; }
+
+/* footer */
+.dialog-ft {
+  padding: 8px 16px 16px; }
+
+.dialog-mask {
+  /* 铺满全屏 */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* 黑色半透明 */
+  background-color: rgba(0, 0, 0, 0.5); }
+
+.dialog-wrap {
+  /* 模态框铺满全屏 */
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  /* 建议使用全局参数 $z_dialog */
+  z-index: 200;
+  /* 内容超高的时候，显示滚动条 */
+  overflow: auto; }
+
+.dialog-wrap {
+  /* 默认不显示 */
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 200ms, opacity 200ms; }
+
+.dialog-switch:checked + .dialog-wrap,
+.dialog-wrap._on {
+  visibility: visible;
+  opacity: 1; }
+
+/*====== 上下左右居中弹窗*/
+.dialog-wrap._middle {
+  box-sizing: border-box;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  /* 水平居中关键 */
+  text-align: center;
+  /* 让 vertical-align: middle; 完美垂直居中 */
+  font-size: 0; }
+
+.dialog-wrap._middle .dialog {
+  width: 90%;
+  /* 在小屏下，流出左右空白区域*/
+  max-width: 600px;
+  border-radius: 3px;
+  display: inline-block;
+  /* inline-block布局 */
+  vertical-align: middle;
+  /* 对齐 .dialog:after */
+  text-align: left;
+  /* 让 dialog 内部文字还原到左对齐 */
+  font-size: 16px;
+  /* 让 dialog 内部文字还原到基础字号 */ }
+
+/* .dialog 元素和这个伪元素垂直居中 */
+.dialog-wrap._middle:after {
+  content: "";
+  height: 100%;
+  display: inline-block;
+  width: 0;
+  vertical-align: middle;
+  margin-left: -1px;
+  /* 防止 .dialog 过宽，伪元素换行 */ }
+
+/* 动效 */
+.dialog-wrap._middle .dialog {
+  /* 上滑动效 */
+  transform: translateY(20px);
+  transition: transform 200ms; }
+
+/*显示的时候上滑动*/
+.dialog-wrap._middle._on .dialog {
+  transform: translateY(0); }
+
+/*====== 底部对齐弹窗*/
+.dialog-wrap._bottom .dialog {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  border-radius: 8px 8px 0 0;
+  /* 上滑动效 */
+  transform: translateY(50%);
+  transition: transform 200ms; }
+
+/*显示的时候上滑动*/
+.dialog-wrap._bottom._on .dialog {
+  transform: translateY(0); }

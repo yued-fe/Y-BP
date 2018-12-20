@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <base target="_blank" />
+    <title>YFE-BP 模态框</title>
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <a href="/YFE-BP" title="YFE-BP 前端最佳实践"
+      ><h1>YFE-BP 前端最佳实践</h1></a
+    >
+    <h2>模态框</h2>
+
+    <label for="dialogDefaultSwitch">点我显示默认弹窗</label>
+    <input id="dialogDefaultSwitch" type="checkbox" class="dialog-switch" />
+    <div class="dialog-wrap">
+      <label for="dialogDefaultSwitch" title="遮罩" class="dialog-mask"></label>
+      <div class="dialog">
+        <label for="dialogDefaultSwitch" title="关闭" class="dialog-close">&times;</label>
+        <div class="dialog-hd"><h3 class="dialog-title">模态框标题</h3></div>
+        <div class="dialog-bd">模态框内容</div>
+        <div class="dialog-ft">模态框底部（一般为操作区）</div>
+      </div>
+    </div>
+
+    <label for="dialogMiddleSwitch">点我显示上下居中弹窗</label>
+    <input id="dialogMiddleSwitch" type="checkbox" class="dialog-switch" />
+    <div class="dialog-wrap _middle">
+      <label for="dialogMiddleSwitch" title="遮罩" class="dialog-mask"></label>
+      <div class="dialog">
+        <label for="dialogMiddleSwitch" title="关闭" class="dialog-close">&times;</label>
+        <div class="dialog-hd"><h3 class="dialog-title">模态框标题</h3></div>
+        <div class="dialog-bd">模态框内容</div>
+        <div class="dialog-ft">模态框底部（一般为操作区）</div>
+      </div>
+    </div>
+
+    <label for="dialogBottomSwitch">点我显示底部对齐弹窗</label>
+    <input id="dialogBottomSwitch" type="checkbox" class="dialog-switch" />
+    <div class="dialog-wrap _bottom">
+      <label for="dialogBottomSwitch" title="遮罩" class="dialog-mask"></label>
+      <div class="dialog">
+        <label for="dialogBottomSwitch" title="关闭" class="dialog-close">&times;</label>
+        <div class="dialog-hd"><h3 class="dialog-title">模态框标题</h3></div>
+        <div class="dialog-bd">模态框内容</div>
+        <div class="dialog-ft">模态框底部（一般为操作区）</div>
+      </div>
+    </div>
+  </body>
+</html>

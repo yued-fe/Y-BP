@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <base target="_blank" />
+    <title>YFE-BP 模态框</title>
+
+    <style>
+      html {
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica,
+          Arial, sans-serif;
+      }
+      style[contenteditable] {
+        display: block;
+        white-space: pre-wrap;
+        word-wrap: normal;
+        line-height: 1.5;
+      }
+      style[contenteditable]::first-line {
+        font-size: 0;
+      }
+      h3.demo-mod {
+        padding-top: 1em;
+      }
+      table.demo-mod {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+      table.demo-mod td {
+        vertical-align: top;
+        padding: 0.5em;
+        border: 1px solid #333;
+      }
+      style.demo-mod {
+        padding: 0.5em;
+        border: 1px solid #333;
+      }
+      .dialog-demo {
+        position: relative;
+        height: 400px;
+      }
+      .dialog-wrap._demo {
+        position: relative;
+        height: 400px;
+        box-shadow: 0 0 3px #000;
+        min-width: 160px;
+      }
+      .dialog-wrap._demo .dialog-mask {
+        position: absolute;
+      }
+      .dialog-demo .dialog-mask {
+        position: absolute;
+      }
+      .dialog-switch {
+        position: fixed;
+        top: 0;
+        left: 0;
+        visibility: hidden;
+      }
+      .dialog-switch:checked .dialog-wrap {
+        visibility: visible;
+        opacity: 0;
+      }
+    </style>
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <a href="/YFE-BP" title="YFE-BP 前端最佳实践"
+      ><h1>YFE-BP 前端最佳实践</h1></a
+    >
+    <h2>模态框</h2>
+    <p>模态框几乎是除了按钮之外，最容易被使用到的组件了。</p>
+    <p>以下代码均可实时编辑，实时更新。</p>
+
+    <h3 class="demo-mod">Dom 结构</h3>
+    <pre>
+        &lt;div class=&quot;dialog-wrap&quot;&gt;
+            &lt;a href=&quot;javascript:;&quot; title=&quot;遮罩&quot; class=&quot;mask&quot;&gt;&lt;/a&gt;        
+            &lt;div class=&quot;dialog&quot;&gt;
+                &lt;a href=&quot;javascript:;&quot; title=&quot;关闭&quot; class=&quot;dialog-mask&quot;&gt;&amp;times;&lt;/a&gt;      
+                &lt;div class=&quot;dialog-hd&quot;&gt;
+                    &lt;h3 class=&quot;dialog-title&quot;&gt;模态框示例&lt;/h3&gt;       
+                &lt;/div&gt;
+                &lt;div class=&quot;dialog-bd&quot;&gt;
+                    模态框内容
+                &lt;/div&gt;
+                &lt;div class=&quot;dialog-ft&quot;&gt;
+                    模态框底部（一般为操作区）
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    </pre>
+
+    <h3>关闭按钮 <code>[.dialog-close]</code></h3>
+    <p>
+      因为HTML 字符
+      <code>&amp;times;</code>
+      默认就是一个叉的形状，所以这边用这个来降级。当然也可以通过字体，图片，svg
+      或者直接 css 绘制。
+    </p>
+    <table class="demo-mod">
+      <tr>
+        <th>示例</th>
+        <th>基础样式</th>
+        <th>放到弹窗右上角</th>
+        <th>鼠标移入状态</th>
+        <th>鼠标按下状态</th>
+      </tr>
+      <tr>
+        <td>
+          <div class="dialog-demo" style="width:60px;">
+            <a javascript:; title="关闭" class="dialog-close">&times;</a>
+          </div>
+        </td>
+        <td>
+          <style contenteditable="true">
+            .dialog-close {
+              /* 设置大小 */
+              width: 24px;
+              height: 24px;             
+
+              /* 设置关闭符号 */
+              font-size: 24px;
+              line-height: 20px;
+              text-align: center;
+              border-radius: 100%;
+              color: #999;
+              
+              /* 让鼠标不能框选字符 */
+              user-select: none;
+
+              /* a 链接去掉下划线 */
+              text-decoration: none;
+            }
+          </style>
+        </td>
+        <td>
+          <style contenteditable="true">
+            .dialog-close {
+              /*放到 .dialog 右上角*/
+              position: absolute;
+              top: 16px;
+              right: 16px;
+            }
+          </style>
+        </td>
+        <td>
+          <style contenteditable="true">
+            /* hover 变色 */
+            .dialog-close:hover {
+              color: #333;
+            }
+          </style>
+        </td>
+        <td>
+          <style contenteditable="true">
+            /* active 变色 */
+            .dialog-close:active {
+              background-color: rgba(0, 0, 0, 0.2);
+            }
+          </style>
+        </td>
+      </tr>
+    </table>
+
+    <h3>主体</h3>
+    <p>
+      半透明的遮罩，可以直接通过设置
+      <code>.dialog-wrap</code> 元素的背景颜色实现，但这边我们推荐单独用一个
+      <code>.dialog-mask</code> 元素去实现。
+    </p>
+    <ol>
+      <li>
+        这样在不需要半透明遮罩，不输出 <code>.dialog-mask</code> 这个元素即可;
+      </li>
+      <li>
+        需要点击遮罩关闭弹窗的时候，只需要在
+        <code>.dialog-mask</code> 元素上绑定事件;
+      </li>
+    </ol>
+    <table class="demo-mod">
+      <tr>
+        <td colspan="3">
+          <div class="dialog-wrap _on _demo">
+            <label for="dialogDefault" title="遮罩" class="dialog-mask"></label>
+            <div class="dialog">
+              <label for="dialogDefault" title="关闭" class="dialog-close"
+                >&times;</label
+              >
+              <div class="dialog-hd">
+                <h3 class="dialog-title">模态框示例</h3>
+              </div>
+              <div class="dialog-bd">模态框主内容</div>
+              <div class="dialog-ft">模态框底部（一般为操作区）</div>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th>模态框遮罩 <code>[.dialog-mask]</code></th>
+        <th>模态框容器 <code>[.dialog-wrap]</code></th>
+        <th>模态框主体 <code>[.dialog]</code></th>
+      </tr>
+      <tr>
+        <td>
+          <style contenteditable="true">
+            .dialog-wrap {
+              /* 铺满全屏 */
+              position: fixed;
+              top: 0;
+              left: 0;
+              bottom: 0;
+              width: 100%;
+
+              /* 建议使用全局参数 $z_dialog */
+              z-index: 200;
+
+              /* 内容超高的时候，显示滚动条 */
+              overflow: auto;
+            }
+          </style>
+        </td>
+        <td>
+          <style contenteditable="true">
+            .dialog-mask {
+              /* 铺满全屏 */
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+
+              /* 黑色半透明 */
+              background-color: rgba(0, 0, 0, 0.5);
+            }
+          </style>
+        </td>
+        <td>
+          <style contenteditable="true">
+            .dialog {
+              background-color: #fff;
+              position: relative;
+            }
+            /* 标题 */
+            .dialog-title {
+              margin: 0;
+            }
+            /* header */
+            .dialog-hd {
+              padding: 16px 16px 8px;
+            }
+            /* body */
+            .dialog-bd {
+              padding: 8px 16px;
+            }
+            /* footer */
+            .dialog-ft {
+              padding: 8px 16px 16px;
+            }
+          </style>
+        </td>
+      </tr>
+    </table>
+
+    <h3>布局方式</h3>
+    <table class="demo-mod">
+      <tr>
+        <th>底部对齐</th>
+        <th colspan="2">居中布局</th>
+      </tr>
+      <tr>
+        <td>
+          <div class="dialog-wrap _bottom _demo _on">
+            <label for="dialogBottom" title="遮罩" class="dialog-mask"></label>
+            <div class="dialog">
+              <label for="dialogBottom" title="关闭" class="dialog-close"
+                >&times;</label
+              >
+              <div class="dialog-hd">
+                <h3 class="dialog-title">模态框示例</h3>
+              </div>
+              <div class="dialog-bd">模态框主内容</div>
+              <div class="dialog-ft">模态框底部（一般为操作区）</div>
+            </div>
+          </div>
+        </td>
+        <td colspan="2">
+          <div class="dialog-wrap _middle _demo _on">
+            <label for="dialogBottom" title="遮罩" class="dialog-mask"></label>
+            <div class="dialog">
+              <label for="dialogBottom" title="关闭" class="dialog-close"
+                >&times;</label
+              >
+              <div class="dialog-hd">
+                <h3 class="dialog-title">模态框示例</h3>
+              </div>
+              <div class="dialog-bd">模态框主内容</div>
+              <div class="dialog-ft">模态框底部（一般为操作区）</div>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <style contenteditable="true">
+            .dialog-wrap._bottom .dialog {
+              /* 采用相对定位对齐 */
+              position: absolute;
+              left: 0;
+              width: 100%;
+              bottom: 0;
+              border-radius: 8px 8px 0 0;
+            }
+          </style>
+        </td>
+        <td>
+          <style contenteditable="true">
+            .dialog-wrap._middle {
+              /* 防止顶部和底部 .dialog 贴边 */
+              padding-top: 16px;
+              padding-bottom: 16px;
+              /* 水平居中 */
+              text-align: center;
+              /* 让 vertical-align: middle; 完美垂直居中 */
+              font-size: 0;
+            }
+
+            /* .dialog 元素和这个伪元素垂直居中 */
+            .dialog-wrap._middle:after {
+              content: "";
+              height: 100%;
+              display: inline-block;
+              width: 0;
+              vertical-align: middle;
+              margin-left: -1px; /* 防止 .dialog 过宽，伪元素换行 */
+            }
+          </style>          
+        </td>
+        <td>
+            <style contenteditable="true">   
+                .dialog-wrap._middle .dialog {
+                  width: 90%; /* 留出左右空白区域*/
+                  max-width: 600px;
+                  border-radius: 3px;
+                  display: inline-block; /* inline-block布局 */
+                  vertical-align: middle; /* 对齐 .dialog:after */
+                  text-align: left; /* 让 dialog 内部文字还原到左对齐 */
+                  font-size: 16px; /* 让 dialog 内部文字还原到基础字号 */
+                }
+              </style>  
+            <p>
+                来自张鑫旭老师
+                <a
+                  href="https://www.zhangxinxu.com/sp/lulu/mockup/content/apis/dialog.php"
+                  >LULU弹窗组件</a
+                >的居中布局小技巧。
+              </p>
+              <p>
+                是目前我们知道的兼容性最好的不定宽弹窗上下左右垂直居中布局方式。
+              </p>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

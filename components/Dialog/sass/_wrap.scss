@@ -1,0 +1,29 @@
+@import "_var.scss";
+
+.dialog-wrap {
+  /* 模态框铺满全屏 */
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+
+  /* 建议使用全局参数 $z_dialog */
+  z-index: 200;
+
+  /* 内容超高的时候，显示滚动条 */
+  overflow: auto;
+}
+
+.dialog-wrap {
+  /* 默认不显示 */
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 200ms, opacity 200ms;
+}
+
+.dialog-switch:checked + .dialog-wrap,
+.dialog-wrap._on {
+  visibility: visible;
+  opacity: 1;
+}
