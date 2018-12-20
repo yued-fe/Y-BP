@@ -19,10 +19,11 @@
   /* 默认不显示 */
   visibility: hidden;
   opacity: 0;
+
+  /* 动效 */
   transition: visibility 200ms, opacity 200ms;
 }
 
-.dialog-switch:checked + .dialog-wrap,
 .dialog-wrap._on {
   visibility: visible;
   opacity: 1;

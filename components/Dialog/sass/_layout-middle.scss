@@ -6,9 +6,19 @@
   padding-top: 16px;
   padding-bottom: 16px;
   /* 水平居中关键 */
-  text-align: center; 
+  text-align: center;
   /* 让 vertical-align: middle; 完美垂直居中 */
-  font-size: 0; 
+  font-size: 0;
+}
+
+/* .dialog 元素和这个伪元素垂直居中 */
+.dialog-wrap._middle:after {
+  content: "";
+  height: 100%;
+  display: inline-block;
+  width: 0;
+  vertical-align: middle;
+  margin-left: -1px; /* 防止 .dialog 过宽，伪元素换行 */
 }
 
 .dialog-wrap._middle .dialog {
@@ -19,27 +29,13 @@
   vertical-align: middle; /* 对齐 .dialog:after */
   text-align: left; /* 让 dialog 内部文字还原到左对齐 */
   font-size: 16px; /* 让 dialog 内部文字还原到基础字号 */
-}
 
-/* .dialog 元素和这个伪元素垂直居中 */
-
-.dialog-wrap._middle:after {
-  content: "";
-  height: 100%;
-  display: inline-block;
-  width: 0;
-  vertical-align: middle;
-  margin-left: -1px; /* 防止 .dialog 过宽，伪元素换行 */
-}
-
-/* 动效 */
-.dialog-wrap._middle .dialog {
   /* 上滑动效 */
-  transform: translateY(20px);
+  transform: translate3d(0, 20px, 0);
   transition: transform 200ms;
 }
 
 /*显示的时候上滑动*/
 .dialog-wrap._middle._on .dialog {
-  transform: translateY(0);
+  transform: translate3d(0, 0, 0);
 }

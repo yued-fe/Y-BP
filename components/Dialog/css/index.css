@@ -66,9 +66,9 @@
   /* 默认不显示 */
   visibility: hidden;
   opacity: 0;
+  /* 动效 */
   transition: visibility 200ms, opacity 200ms; }
 
-.dialog-switch:checked + .dialog-wrap,
 .dialog-wrap._on {
   visibility: visible;
   opacity: 1; }
@@ -83,6 +83,16 @@
   /* 让 vertical-align: middle; 完美垂直居中 */
   font-size: 0; }
 
+/* .dialog 元素和这个伪元素垂直居中 */
+.dialog-wrap._middle:after {
+  content: "";
+  height: 100%;
+  display: inline-block;
+  width: 0;
+  vertical-align: middle;
+  margin-left: -1px;
+  /* 防止 .dialog 过宽，伪元素换行 */ }
+
 .dialog-wrap._middle .dialog {
   width: 90%;
   /* 在小屏下，流出左右空白区域*/
@@ -95,27 +105,14 @@
   text-align: left;
   /* 让 dialog 内部文字还原到左对齐 */
   font-size: 16px;
-  /* 让 dialog 内部文字还原到基础字号 */ }
-
-/* .dialog 元素和这个伪元素垂直居中 */
-.dialog-wrap._middle:after {
-  content: "";
-  height: 100%;
-  display: inline-block;
-  width: 0;
-  vertical-align: middle;
-  margin-left: -1px;
-  /* 防止 .dialog 过宽，伪元素换行 */ }
-
-/* 动效 */
-.dialog-wrap._middle .dialog {
+  /* 让 dialog 内部文字还原到基础字号 */
   /* 上滑动效 */
-  transform: translateY(20px);
+  transform: translate3d(0, 20px, 0);
   transition: transform 200ms; }
 
 /*显示的时候上滑动*/
 .dialog-wrap._middle._on .dialog {
-  transform: translateY(0); }
+  transform: translate3d(0, 0, 0); }
 
 /*====== 底部对齐弹窗*/
 .dialog-wrap._bottom .dialog {
@@ -125,9 +122,9 @@
   bottom: 0;
   border-radius: 8px 8px 0 0;
   /* 上滑动效 */
-  transform: translateY(50%);
+  transform: translate3d(0, 50%, 0);
   transition: transform 200ms; }
 
 /*显示的时候上滑动*/
 .dialog-wrap._bottom._on .dialog {
-  transform: translateY(0); }
+  transform: translate3d(0, 0, 0); }

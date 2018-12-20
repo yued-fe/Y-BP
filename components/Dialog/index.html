@@ -32,6 +32,10 @@
         border-collapse: collapse;
         border-spacing: 0;
       }
+      table.demo-mod th {
+        border: 1px solid #333;
+        padding: 0.5em;
+      }
       table.demo-mod td {
         vertical-align: top;
         padding: 0.5em;
@@ -68,7 +72,7 @@
         opacity: 0;
       }
     </style>
-    <link rel="stylesheet" href="./css/index.css" />
+    <!-- <link rel="stylesheet" href="./css/index.css" /> -->
   </head>
   <body>
     <a href="/YFE-BP" title="YFE-BP 前端最佳实践"
@@ -123,7 +127,7 @@
             .dialog-close {
               /* 设置大小 */
               width: 24px;
-              height: 24px;             
+              height: 24px;
 
               /* 设置关闭符号 */
               font-size: 24px;
@@ -131,7 +135,7 @@
               text-align: center;
               border-radius: 100%;
               color: #999;
-              
+
               /* 让鼠标不能框选字符 */
               user-select: none;
 
@@ -188,10 +192,10 @@
       <tr>
         <td colspan="3">
           <div class="dialog-wrap _on _demo">
-            <label for="dialogDefault" title="遮罩" class="dialog-mask"></label>
+            <a href="javascript:;" title="遮罩" class="dialog-mask"></a>
             <div class="dialog">
-              <label for="dialogDefault" title="关闭" class="dialog-close"
-                >&times;</label
+              <a href="javascript:;" title="关闭" class="dialog-close"
+                >&times;</a
               >
               <div class="dialog-hd">
                 <h3 class="dialog-title">模态框示例</h3>
@@ -268,6 +272,77 @@
       </tr>
     </table>
 
+    <h3>显示隐藏 <code>JS</code></h3>
+    <p>通常我们默认弹窗不显示。</p>
+    <p>
+      然后通过 JS 去给 <code>.dialog-wrap</code> 添加一个标志位的
+      <code>class</code> 来控制弹窗的显示。
+    </p>
+    <p>
+      在我们<a href="https://github.com/yued-fe/YFE-BP/issues/7">规范</a
+      >里，我们推荐使用 <code>._on</code> 来作为这个标志位 <code>class</code>。
+    </p>
+    <table class="demo-mod">
+      <tr>
+        <td>
+          <button
+            id="dialogJsHideBtn"
+            type="button"
+            onclick="dialogJs.classList.remove('_on');"
+          >
+            隐藏弹窗
+          </button>
+          <button
+            id="dialogJsShowBtn"
+            type="button"
+            onclick="dialogJs.classList.add('_on');"
+          >
+            显示弹窗
+          </button>
+          <div id="dialogJs" class="dialog-wrap _demo _on">
+            <a
+              href="javascript:;"
+              onclick="dialogJs.classList.remove('_on');"
+              title="遮罩"
+              class="dialog-mask"
+            ></a>
+            <div class="dialog">
+              <a
+                href="javascript:;"
+                onclick="dialogJs.classList.remove('_on');"
+                title="关闭"
+                class="dialog-close"
+                >&times;</a
+              >
+              <div class="dialog-hd">
+                <h3 class="dialog-title">模态框示例</h3>
+              </div>
+              <div class="dialog-bd">模态框主内容</div>
+              <div class="dialog-ft">模态框底部（一般为操作区）</div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <style contenteditable="true">
+            .dialog-wrap {
+              /* 默认不显示 */
+              visibility: hidden;
+              opacity: 0;
+
+              /* 动效 */
+              transition: visibility 200ms, opacity 200ms;
+            }
+
+            /* 通过JS切换一个class来控制显示藏 */
+            .dialog-wrap._on {
+              visibility: visible;
+              opacity: 1;
+            }
+          </style>
+        </td>
+      </tr>
+    </table>
+
     <h3>布局方式</h3>
     <table class="demo-mod">
       <tr>
@@ -276,11 +351,25 @@
       </tr>
       <tr>
         <td>
-          <div class="dialog-wrap _bottom _demo _on">
-            <label for="dialogBottom" title="遮罩" class="dialog-mask"></label>
+          <button
+            id="dialogBottomJsHideBtn"
+            type="button"
+            onclick="dialogBottomJs.classList.remove('_on');"
+          >
+            隐藏弹窗
+          </button>
+          <button
+            id="dialogBottomJsShowBtn"
+            type="button"
+            onclick="dialogBottomJs.classList.add('_on');"
+          >
+            显示弹窗
+          </button>
+          <div id="dialogBottomJs" class="dialog-wrap _bottom _demo _on">
+            <a href="javascript:;" title="遮罩" class="dialog-mask"></a>
             <div class="dialog">
-              <label for="dialogBottom" title="关闭" class="dialog-close"
-                >&times;</label
+              <a href="javascript:;" title="关闭" class="dialog-close"
+                >&times;</a
               >
               <div class="dialog-hd">
                 <h3 class="dialog-title">模态框示例</h3>
@@ -291,12 +380,26 @@
           </div>
         </td>
         <td colspan="2">
-          <div class="dialog-wrap _middle _demo _on">
-            <label for="dialogBottom" title="遮罩" class="dialog-mask"></label>
+          <button
+            id="dialogMiddleJsHideBtn"
+            type="button"
+            onclick="dialogMiddleJs.classList.remove('_on');"
+          >
+            隐藏弹窗
+          </button>
+          <button
+            id="dialogMiddleJsShowBtn"
+            type="button"
+            onclick="dialogMiddleJs.classList.add('_on');"
+          >
+            显示弹窗
+          </button>
+          <div id="dialogMiddleJs" class="dialog-wrap _middle _demo _on">
+            <a href="javascript:;" title="遮罩" class="dialog-mask"></a>
             <div class="dialog">
-              <label for="dialogBottom" title="关闭" class="dialog-close"
-                >&times;</label
-              >
+              <a href="javascript:;" title="关闭" class="dialog-close">
+                &times;
+              </a>
               <div class="dialog-hd">
                 <h3 class="dialog-title">模态框示例</h3>
               </div>
@@ -310,22 +413,29 @@
         <td>
           <style contenteditable="true">
             .dialog-wrap._bottom .dialog {
-              /* 采用相对定位对齐 */
               position: absolute;
               left: 0;
               width: 100%;
               bottom: 0;
               border-radius: 8px 8px 0 0;
+              /* 上滑动效 */
+              transform: translate3d(0, 50%, 0);
+              transition: transform 200ms;
+            }
+
+            /*显示的时候上滑动*/
+            .dialog-wrap._bottom._on .dialog {
+              transform: translate3d(0, 0, 0);
             }
           </style>
         </td>
         <td>
           <style contenteditable="true">
             .dialog-wrap._middle {
-              /* 防止顶部和底部 .dialog 贴边 */
+              box-sizing: border-box;
               padding-top: 16px;
               padding-bottom: 16px;
-              /* 水平居中 */
+              /* 水平居中关键 */
               text-align: center;
               /* 让 vertical-align: middle; 完美垂直居中 */
               font-size: 0;
@@ -340,30 +450,39 @@
               vertical-align: middle;
               margin-left: -1px; /* 防止 .dialog 过宽，伪元素换行 */
             }
-          </style>          
+          </style>
         </td>
         <td>
-            <style contenteditable="true">   
-                .dialog-wrap._middle .dialog {
-                  width: 90%; /* 留出左右空白区域*/
-                  max-width: 600px;
-                  border-radius: 3px;
-                  display: inline-block; /* inline-block布局 */
-                  vertical-align: middle; /* 对齐 .dialog:after */
-                  text-align: left; /* 让 dialog 内部文字还原到左对齐 */
-                  font-size: 16px; /* 让 dialog 内部文字还原到基础字号 */
-                }
-              </style>  
-            <p>
-                来自张鑫旭老师
-                <a
-                  href="https://www.zhangxinxu.com/sp/lulu/mockup/content/apis/dialog.php"
-                  >LULU弹窗组件</a
-                >的居中布局小技巧。
-              </p>
-              <p>
-                是目前我们知道的兼容性最好的不定宽弹窗上下左右垂直居中布局方式。
-              </p>
+          <style contenteditable="true">
+            .dialog-wrap._middle .dialog {
+              width: 90%; /* 在小屏下，流出左右空白区域*/
+              max-width: 600px;
+              border-radius: 3px;
+              display: inline-block; /* inline-block布局 */
+              vertical-align: middle; /* 对齐 .dialog:after */
+              text-align: left; /* 让 dialog 内部文字还原到左对齐 */
+              font-size: 16px; /* 让 dialog 内部文字还原到基础字号 */
+
+              /* 上滑动效 */
+              transform: translate3d(0, 20px, 0);
+              transition: transform 200ms;
+            }
+
+            /*显示的时候上滑动*/
+            .dialog-wrap._middle._on .dialog {
+              transform: translate3d(0, 0, 0);
+            }
+          </style>
+          <p>
+            来自张鑫旭老师
+            <a
+              href="https://www.zhangxinxu.com/sp/lulu/mockup/content/apis/dialog.php"
+              >LULU弹窗组件</a
+            >的居中布局小技巧。
+          </p>
+          <p>
+            是目前我们知道的兼容性最好的不定宽弹窗上下左右垂直居中布局方式。
+          </p>
         </td>
       </tr>
     </table>
