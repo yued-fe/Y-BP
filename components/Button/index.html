@@ -15,7 +15,7 @@
       }
       style[contenteditable] {
         display: block;
-        white-space: pre-line;
+        white-space: pre-wrap;
         word-wrap: normal;
         line-height: 1.5;
       }
@@ -106,14 +106,6 @@
       <tr>
         <td>
           <button class="btn _primary">按钮 <code>[_primary]</code></button>
-          <p>
-            我们让按钮的默认样式，就是 primary
-            的样式。这样不用每次在使用默认按钮的时候还要再添加 primary 属性。
-          </p>
-          <p>
-            对于 hover 状态的颜色变化，我们建议使用 less 或者 sass 的 darken
-            函数基于主颜色去处理。
-          </p>
         </td>
         <td>
           <style contenteditable="true">
@@ -129,12 +121,22 @@
             }
           </style>
         </td>
+        <td>
+          <p>
+            我们让按钮的默认样式，就是 primary
+            的样式。这样不用每次在使用默认按钮的时候还要再添加 primary 属性。
+          </p>
+          <p>
+            对于 hover 状态的颜色变化，我们建议使用 less 或者 sass 的 darken
+            函数基于主颜色去处理。
+          </p>
+        </td>
       </tr>
       <tr>
         <td>
           <button class="btn _warning">按钮 <code>[_warning]</code></button>
         </td>
-        <td>
+        <td colspan="2">
           <style contenteditable="true">
             .btn._warning {
               background-color: yellow;
@@ -151,7 +153,7 @@
         <td>
           <button class="btn _success">按钮 <code>[_success]</code></button>
         </td>
-        <td>
+        <td colspan="2">
           <style contenteditable="true">
             .btn._success {
               background-color: green;
@@ -168,7 +170,7 @@
         <td>
           <button class="btn _danger">按钮 <code>[_danger]</code></button>
         </td>
-        <td>
+        <td colspan="2">
           <style contenteditable="true">
             .btn._danger {
               background-color: red;
@@ -188,7 +190,7 @@
             >张老师</a
           >的小技巧
         </td>
-        <td>
+        <td colspan="2">
           <style contenteditable="true">
             .btn::first-line {
               color: #fff;
@@ -331,6 +333,10 @@
     </table>
 
     <h3 id="status" class="demo-mod">按钮状态 <small>[_status.scss]</small></h3>
+    <p>
+      在<a href="#theme">按钮主题</a>的部分有写 hover 的样式，
+      可以在右侧括号内尝试自定义
+    </p>
     <table class="demo-mod">
       <tr>
         <td><button disabled class="btn">禁用按钮[:disabled]</button></td>
@@ -346,13 +352,7 @@
         </td>
       </tr>
       <tr>
-        <td>
-          <button class="btn _hover">禁用鼠标移入[:hover]</button>
-          <p>
-            在<a href="#theme">按钮主题</a>的部分有写 hover 的样式，
-            可以在右侧括号内尝试自定义
-          </p>
-        </td>
+        <td><button class="btn _hover">禁用鼠标移入[:hover]</button></td>
         <td>
           <style contenteditable="true">
             .btn:hover,
