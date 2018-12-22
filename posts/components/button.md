@@ -75,16 +75,20 @@
       border: none 0; 
 }          
 ```
-对于按钮基础样式，因为没有涉及到按钮封装，所以大家的样式都大同小异。
+对于按钮基础样式，因为没有涉及到按钮的拓展性，所以大家的样式基本都大同小异。
 
 ### 按钮拓展
 
-我们要拓展按钮，就要先看看按钮分类有哪些。
+按钮基础样式设定完成之后，我们要做的就是思考按钮的拓展了。要拓展按钮，首先要先看看按钮的分类有哪些。
 
-1. 按钮主题 「 _theme.scss 」;
-2. 按钮状态 「 _status.scss 」;
-3. 按钮大小 「 _size.scss 」;
-4. 按钮形状 「 _shape.scss 」;
+1. 按钮主题 「 _theme.scss 」：`主按钮 primary`, `次按钮 secondary`, `成功按钮 success`, `危险按钮 danger`, `警告按钮 warning` ...
+2. 按钮状态 「 _status.scss 」: `禁用 disabled`, `鼠标移入 hover`, `鼠标按下 active`, `获取焦点 focus`, `加载 loading`...
+3. 按钮大小 「 _size.scss 」: `比大更大 largex`, `大按钮 large`, `默认按钮 default`, `中号按钮 middle`, `小按钮 small`, `比小更小 smallx` ...
+4. 按钮形状 「 _shape.scss 」: `链接按钮 link`, `幽灵按钮 ghost`, `胶囊按钮 capsule`, `块状按钮 block`...
+
+基本上我们按钮主要可以分为以上四大类，而以上的几大类又可以互相的排列组合。
+
+比如 `disabled`, `warning`, `ghost`, `large` 可以表示一个禁用状态下的警告幽灵大按钮。
 
 ### 按钮主题 「 _theme.scss 」
 
