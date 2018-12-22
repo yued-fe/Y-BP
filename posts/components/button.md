@@ -114,15 +114,30 @@ Bootstrap 是一个没有特定产品的通用基础框架，即使在按钮设�
 ```Vue
 <ui-button theme="primary">按钮</ui-button>
 ```
+
 在类似 React 和 VUE 的场景中我们推荐直接使用 props 去拓展组件 <Button primary />，当然组件内部的实现可以采用和原生 CSS 一样的逻辑。
 
 按钮的主题色，在实际开发中我们的颜色应该是基于全局的颜色参数去获取的。对于全局颜色参数的命名，我们推荐使用 c_ 前缀。
 
 ### 按钮大小 「 _size.scss 」
 
-对于按钮大小的拓展我们使用了四种按钮大小。拓展建议通过类似衣服尺码 xs, xl 添加 x 的方式进行拓展 _largex。
+对于按钮大小的拓展我们使用了四种按钮大小。拓展的方式，建议通过类似衣服尺码 xs, xl 添加 x 的方式进行拓展 _largex。
 我们在大小的数量上和主题是一样的，建议使用更少的大小，适配更多的场景。
 
+#### 原生CSS
+
+```HTML
+<button type="button" class="btn _primary _large">按钮</button>  
+``` 
+#### React ||  VUE
+
+```JSX
+<Button theme="primary" size="large">按钮</Button>
+```
+
+```Vue
+<ui-button theme="primary" size="large">按钮</ui-button>
+```
 
 ### 按钮形状 「 _shape.scss 」
 
