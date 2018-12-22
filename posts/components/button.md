@@ -77,14 +77,14 @@
 ```
 对于按钮基础样式，因为没有涉及到按钮的拓展性，所以大家的样式基本都大同小异。
 
-### 按钮拓展
+### 按钮分类
 
 按钮基础样式设定完成之后，我们要做的就是思考按钮的拓展了。要拓展按钮，首先要先看看按钮的分类有哪些。
 
 1. 按钮主题 「 _theme.scss 」：`主按钮 primary`, `次按钮 secondary`, `成功按钮 success`, `危险按钮 danger`, `警告按钮 warning` ...
-2. 按钮状态 「 _status.scss 」: `禁用 disabled`, `鼠标移入 hover`, `鼠标按下 active`, `获取焦点 focus`, `加载 loading`...
-3. 按钮大小 「 _size.scss 」: `比大更大 largex`, `大按钮 large`, `默认按钮 default`, `中号按钮 middle`, `小按钮 small`, `比小更小 smallx` ...
-4. 按钮形状 「 _shape.scss 」: `链接按钮 link`, `幽灵按钮 ghost`, `胶囊按钮 capsule`, `块状按钮 block`...
+2. 按钮大小 「 _size.scss 」: `比大更大 largex`, `大按钮 large`, `默认按钮 default`, `中号按钮 middle`, `小按钮 small`, `比小更小 smallx` ...
+3. 按钮形状 「 _shape.scss 」: `链接按钮 link`, `幽灵按钮 ghost`, `胶囊按钮 capsule`, `块状按钮 block`...
+4. 按钮状态 「 _status.scss 」: `禁用 disabled`, `鼠标移入 hover`, `鼠标按下 active`, `获取焦点 focus`, `加载 loading`...
 
 基本上我们按钮主要可以分为以上四大类，而以上的几大类又可以互相的排列组合。
 
@@ -94,13 +94,22 @@
 
 按钮主题其实是按照功能区分，只是设计师通常用颜色区分功能，所以主题也近似可以看作是颜色的区分。
 
-Bootstrap 是一个没有特定产品的通用基础框架，即使在按钮设计极致收敛的情况下，仍然有 "Primary, Secondary, Success, Danger, Warning, Info, Light , Dark" 八种主题。
+Bootstrap 是一个没有特定产品的通用基础框架，即使在按钮设计极致收敛的情况下，仍然有 "Primary, Secondary, Success, Danger, Warning, Info, Light , Dark， Link" 九种主题（在我们看来 `link` 状态的按钮也可以表达 `primary` 的作用，所以不同于 Bootstrap 我们把 `Link` 归类到了形状这个分类中）。
 
-对于我们自己的产品来说，这么多的分类是不推荐的。我们期望的是，用更少的主题适应更多的场景，要达到这一点，也是需要多和设计师沟通的。
+对于我们自己的产品来说，这么多的分类是不推荐的。我们期望的是，用更少的主题适应更多的场景，要达到这一点，也是需要多和设计师沟通的。以我们的经验， `主按钮 primary`, `次按钮 secondary`, `成功按钮 success`, `危险按钮 danger`, `警告按钮 warning` 这5种主题已经能涵盖很大一部分场景了。
 
 在CSS规范中有提到通过是用下滑线作为前缀的命名规则。在类似 React 和 VUE 的场景中我们推荐直接使用 props 去拓展组件 <Button primary />。相应的可以使用 CSS 的属性选择器去设定样式，以保证一致性 button[primary]{}。
 
 按钮的主题色，在实际开发中我们的颜色应该是基于全局的颜色参数去获取的。对于颜色参数的命名，我们推荐使用 c_ 前缀。
+
+### 按钮大小 「 _size.scss 」
+
+对于按钮大小的拓展我们使用了四种按钮大小。拓展建议通过类似衣服尺码 xs, xl 添加 x 的方式进行拓展 _largex。
+我们在大小的数量上和主题是一样的，建议使用更少的大小，适配更多的场景。
+
+
+### 按钮形状 「 _shape.scss 」
+
 
 ### 按钮状态 [_status.scss]
 
@@ -124,11 +133,4 @@ Bootstrap 是一个没有特定产品的通用基础框架，即使在按钮设�
   opacity: 0.5; 
 }
 ```
-### 按钮大小 「 _size.scss 」
-
-对于按钮大小的拓展我们使用了四种按钮大小。拓展建议通过类似衣服尺码 xs, xl 添加 x 的方式进行拓展 _largex。
-我们在大小的数量上和主题是一样的，建议使用更少的大小，适配更多的场景。
-
-
-### 按钮形状 「 _shape.scss 」
 
