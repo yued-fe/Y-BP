@@ -98,6 +98,22 @@ Bootstrap 是一个没有特定产品的通用基础框架，即使在按钮设�
 
 对于我们自己的产品来说，这么多的分类是不推荐的。我们期望的是，用更少的主题适应更多的场景，要达到这一点，也是需要多和设计师沟通的。以我们的经验， `主按钮 primary`, `次按钮 secondary`, `成功按钮 success`, `危险按钮 danger`, `警告按钮 warning` 这5种主题已经能涵盖很大一部分场景了。
 
+| 原生CSS | React | VUE |
+| ------ | ------ | ------ |
+| 
+```HTML
+<button type="button" class="btn _primary">按钮</button>  
+``` 
+| 
+```JSX
+<Button theme="primary">按钮</Button>
+```
+|
+```Vue
+<ui-button theme="primary">按钮</ui-button>
+```
+|
+
 在CSS规范中有提到通过是用下滑线作为前缀的命名规则。在类似 React 和 VUE 的场景中我们推荐直接使用 props 去拓展组件 <Button primary />。相应的可以使用 CSS 的属性选择器去设定样式，以保证一致性 button[primary]{}。
 
 按钮的主题色，在实际开发中我们的颜色应该是基于全局的颜色参数去获取的。对于颜色参数的命名，我们推荐使用 c_ 前缀。
