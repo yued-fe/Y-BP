@@ -103,22 +103,20 @@ Bootstrap 是一个没有特定产品的通用基础框架，即使在按钮设�
 ```HTML
 <button type="button" class="btn _primary">按钮</button>  
 ``` 
+在 CSS [规范](https://yued-fe.github.io/YFE-BP/posts/styleguide/css) 中有提到通过是用下滑线作为前缀的命名规则。
 
-#### React
+#### React ||  VUE
 
 ```JSX
 <Button theme="primary">按钮</Button>
 ```
 
-#### VUE
-
 ```Vue
 <ui-button theme="primary">按钮</ui-button>
 ```
+在类似 React 和 VUE 的场景中我们推荐直接使用 props 去拓展组件 <Button primary />，当然组件内部的实现可以采用和原生 CSS 一样的逻辑。
 
-在CSS规范中有提到通过是用下滑线作为前缀的命名规则。在类似 React 和 VUE 的场景中我们推荐直接使用 props 去拓展组件 <Button primary />。相应的可以使用 CSS 的属性选择器去设定样式，以保证一致性 button[primary]{}。
-
-按钮的主题色，在实际开发中我们的颜色应该是基于全局的颜色参数去获取的。对于颜色参数的命名，我们推荐使用 c_ 前缀。
+按钮的主题色，在实际开发中我们的颜色应该是基于全局的颜色参数去获取的。对于全局颜色参数的命名，我们推荐使用 c_ 前缀。
 
 ### 按钮大小 「 _size.scss 」
 
