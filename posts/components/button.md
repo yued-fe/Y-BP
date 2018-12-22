@@ -77,6 +77,35 @@
 ```
 对于按钮基础样式，因为没有涉及到按钮封装，所以大家的样式都大同小异。
 
+### 按钮拓展
+
+
+
+
+### 按钮状态 [_status.scss]
+
+按钮常用的四个状态:
+
+1. `:disabled`: 禁用状态；
+2. `:hover`: 鼠标移入；
+3. `:active`: 鼠标按下；
+4. `:focus`: 获取焦点；
+
+
+```css
+.btn:disabled, .btn._disabled {
+  /* 用css的方式让元素不可被选中，不支持该属性的需要用 js 阻止事件提交 */
+  pointer-events: none; 
+   
+  /* 修改鼠标手型为不允许 */
+  cursor: not-allowed; 
+  
+  /* 修改透明度 */
+  opacity: 0.5; 
+}
+```
+
+
 ### 按钮主题 「 _theme.scss 」
 
 Bootstrap 是一个没有特定产品的通用基础框架，即使在按钮设计极致收敛的情况下，仍然有 "Primary, Secondary, Success,Danger,Warning, Info, Light , Dark" 八种。对于我们自己的产品来说，这么多的分类是非常不推荐的。我们推荐的是，用更少的主题适应更多的场景，要达到这一点，是需要多和设计师沟通的。
@@ -93,7 +122,3 @@ Bootstrap 是一个没有特定产品的通用基础框架，即使在按钮设�
 
 ### 按钮形态 「 _shape.scss 」
 
-
-### 按钮状态 [_status.scss]
-
-在按钮主题的部分有写 hover 的样式， 可以在右侧括号内尝试自定义。
