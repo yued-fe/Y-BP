@@ -39,17 +39,35 @@
 
 ```css
 .btn {
-      display: inline-block; /* a 链接也有可能为 button 所以设置 inline-block 属性 */
-      text-align: center; /* 按钮文字居中 */
-      white-space: nowrap; /* 按钮文字不换行 */
-      vertical-align: middle; /* 按钮和文字混排的时候对齐方式 */
-      user-select: none; /* 去掉可以用鼠标选中按钮上的文字功能 */
-      box-sizing: border-box; /* 让padding 和 border 的宽度不影响按钮高度*/
-      border: none 0; /* 去掉按钮的默认边框 */
-      border-radius: 3px; /* 按钮圆角 */
-      cursor: pointer; /* 为非可选按钮的标签添加鼠标手型 */
+      /* a 链接也有可能为 button 所以设置 inline-block 属性 */
+      display: inline-block; 
+      
+      /* 按钮文字居中 */
+      text-align: center; 
+      
+      /* 按钮文字不换行 */
+      white-space: nowrap; 
+      
+      /* 去掉可以用鼠标选中按钮上的文字功能 */
+      user-select: none; 
+      
+      /* 去掉按钮的默认边框 */
+      border: none 0; 
+      
+      /* 为非可选标签，使用了按钮样式，添加鼠标手型 */
+      cursor: pointer;
+      
+      /* 按钮和文字混排的时候近似垂直居中 */      
+      vertical-align: middle; 
+      
+      /* 让padding 和 border 的宽度不影响按钮大小 */
+      box-sizing: border-box;    
+     
+      /* 按钮圆角，这个根据实际设计师设计的情况来 */
+      border-radius: 3px; 
 }          
 ```
+对于按钮的基础样式，这边已经注释了每一行的用意。
 
 ### 按钮主题 「 _theme.scss 」
 
