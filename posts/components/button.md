@@ -106,11 +106,12 @@ Bootstrap 是一个没有特定产品的通用基础框架，即使在按钮设�
 ``` 
 在 CSS [规范](https://yued-fe.github.io/YFE-BP/posts/styleguide/css) 中有提到通过是用下滑线作为前缀的命名规则。
 
-#### React || VUE
+#### React 
 
 ```JSX
 <Button primary>primary按钮</Button>
 ```
+#### VUE
 
 ```Vue
 <ui-button primary>primary按钮</ui-button>
@@ -132,11 +133,12 @@ Bootstrap 是一个没有特定产品的通用基础框架，即使在按钮设�
 <button type="button" class="btn _large">大按钮</button>
 <a href="javascript:;" class="btn _large">大按钮</a>
 ``` 
-#### React ||  VUE
+#### React
 
 ```JSX
 <Button large>大按钮</Button>
 ```
+#### VUE
 
 ```Vue
 <ui-button large>大按钮</ui-button>
@@ -154,11 +156,12 @@ Bootstrap 是一个没有特定产品的通用基础框架，即使在按钮设�
 <button type="button" class="btn _ghost">幽灵按钮</button>
 <a href="javascript:;" class="btn _ghost">幽灵按钮</a>
 ``` 
-#### React ||  VUE
+#### React
 
 ```JSX
 <Button ghost size="large">幽灵按钮</Button>
 ```
+#### VUE
 
 ```Vue
 <ui-button ghost size="large">幽灵按钮</ui-button>
@@ -193,12 +196,13 @@ Bootstrap 是一个没有特定产品的通用基础框架，即使在按钮设�
 <button type="button" disabled class="btn">禁用按钮</button>
 <a href="javascript:;" disabled class="btn">幽灵按钮</a>
 ``` 
-#### React ||  VUE
+#### React
 
 ```JSX
 <Button disabled>禁用按钮</Button>
 ```
 
+#### VUE
 ```Vue
 <ui-button disabled>禁用按钮</ui-button>
 ```
