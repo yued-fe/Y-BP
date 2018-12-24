@@ -101,18 +101,19 @@ Bootstrap 是一个没有特定产品的通用基础框架，即使在按钮设�
 #### 原生CSS
 
 ```HTML
-<button type="button" class="btn _primary">按钮</button>  
+<button type="button" class="btn _primary">primary按钮</button>
+<a href="javascript:;" class="btn _primary">primary按钮</a>
 ``` 
 在 CSS [规范](https://yued-fe.github.io/YFE-BP/posts/styleguide/css) 中有提到通过是用下滑线作为前缀的命名规则。
 
-#### React ||  VUE
+#### React || VUE
 
 ```JSX
-<Button theme="primary">按钮</Button>
+<Button primary>primary按钮</Button>
 ```
 
 ```Vue
-<ui-button theme="primary">按钮</ui-button>
+<ui-button primary>primary按钮</ui-button>
 ```
 
 在类似 React 和 VUE 的场景中我们推荐直接使用 props 去拓展组件 <Button primary />，当然组件内部的实现可以采用和原生 CSS 一样的逻辑。
@@ -128,20 +129,40 @@ Bootstrap 是一个没有特定产品的通用基础框架，即使在按钮设�
 #### 原生CSS
 
 ```HTML
-<button type="button" class="btn _primary _large">按钮</button>  
+<button type="button" class="btn _large">大按钮</button>
+<a href="javascript:;" class="btn _large">大按钮</a>
 ``` 
 #### React ||  VUE
 
 ```JSX
-<Button theme="primary" size="large">按钮</Button>
+<Button large>大按钮</Button>
 ```
 
 ```Vue
-<ui-button theme="primary" size="large">按钮</ui-button>
+<ui-button large>大按钮</ui-button>
 ```
 
 ### 按钮形状 「 _shape.scss 」
 
+`链接按钮 link`, `幽灵按钮 ghost`, `胶囊按钮 capsule`, `块状按钮 block`...
+
+按钮的形状，基本上业界常用的是以上四种方式，当然也不排除设计有定制的需求。
+
+#### 原生CSS
+
+```HTML
+<button type="button" class="btn _ghost">幽灵按钮</button>
+<a href="javascript:;" class="btn _ghost">幽灵按钮</a>
+``` 
+#### React ||  VUE
+
+```JSX
+<Button ghost size="large">幽灵按钮</Button>
+```
+
+```Vue
+<ui-button ghost size="large">幽灵按钮</ui-button>
+```
 
 ### 按钮状态 [_status.scss]
 
@@ -164,5 +185,21 @@ Bootstrap 是一个没有特定产品的通用基础框架，即使在按钮设�
   /* 修改透明度 */
   opacity: 0.5; 
 }
+```
+
+#### 原生CSS
+
+```HTML
+<button type="button" disabled class="btn">禁用按钮</button>
+<a href="javascript:;" disabled class="btn">幽灵按钮</a>
+``` 
+#### React ||  VUE
+
+```JSX
+<Button disabled>禁用按钮</Button>
+```
+
+```Vue
+<ui-button disabled>禁用按钮</ui-button>
 ```
 
