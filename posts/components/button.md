@@ -80,10 +80,10 @@
 
 | 类型 | 分类 |
 | ------ | ------ |
-| 按钮主题 `_theme.scss` | `主按钮 primary`, `次按钮 secondary`, `成功按钮 success`, `危险按钮 danger`, `警告按钮 warning` |
-| 按钮大小 `_size.scss`  | `比大更大 largex`, `大按钮 large`, `默认按钮 default`, `中号按钮 middle`, `小按钮 small`, `比小更小 smallx` |
-| 按钮形状 `_shape.scss` | `链接按钮 link`, `幽灵按钮 ghost`, `胶囊按钮 capsule`, `块状按钮 block` |
-| 按钮状态 `_status.scss`  | `禁用 disabled`, `鼠标移入 hover`, `鼠标按下 active`, `获取焦点 focus`, `加载 loading` |
+|按钮主题 `_theme.scss`|`主按钮 primary`, `次按钮 secondary`, `成功按钮 success`, `危险按钮 danger`, `警告按钮 warning`|
+|按钮大小 `_size.scss`|`比大更大 largex`, `大按钮 large`, `默认按钮 default`, `中号按钮 middle`, `小按钮 small`, `比小更小 smallx`|
+|按钮形状 `_shape.scss`|`链接按钮 link`, `幽灵按钮 ghost`, `胶囊按钮 capsule`, `块状按钮 block`|
+|按钮状态 `_status.scss`|`禁用 disabled`, `鼠标移入 hover`, `鼠标按下 active`, `获取焦点 focus`, `加载 loading`|
 
 基本上我们按钮主要可以分为以上四大类，而以上的几大类又可以互相的排列组合。
 
@@ -143,7 +143,7 @@ Bootstrap 是一个没有特定产品的通用基础框架，即使在按钮设�
 
 ### 按钮大小 「 _size.scss 」
 
-|`比大更大 largex`| `大按钮 large`| `默认按钮 default`| `中号按钮 middle`| `小按钮 small`| `比小更小 smallx`| … |
+`比大更大 largex`， `大按钮 large`， `默认按钮 default`， `中号按钮 middle`， `小按钮 small`，`比小更小 smallx`...
 
 在大小的数量上和主题逻辑是一样的，建议使用更少的大小，适配更多的场景，我们推荐使用大，中，小，加默认共计四种样式。
 
@@ -170,7 +170,7 @@ Bootstrap 是一个没有特定产品的通用基础框架，即使在按钮设�
 
 ### 按钮形状 「 _shape.scss 」
 
-|`实心按钮 fill`|`链接按钮 link`|`幽灵按钮 ghost`|`胶囊按钮 capsule`|`块状按钮 block`|
+`实心按钮 fill`, `链接按钮 link`, `幽灵按钮 ghost`, `胶囊按钮 capsule`, `块状按钮 block`...
 
 按钮的形状，基本上业界常用的是以上五种方式，当然也不排除设计有定制的需求。
 
@@ -182,6 +182,7 @@ Bootstrap 是一个没有特定产品的通用基础框架，即使在按钮设�
 ```
 `实心按钮 fill`：背景是主题色，文字是白色的按钮，因为太常用所以一般作为默认按钮的样式，所以在实际开发种我们不会另起一个`fill`的属性。
 
+
 <img width="82" alt="qq20181228-135634 2x" src="https://user-images.githubusercontent.com/7261176/50504703-5cd9b380-0aaa-11e9-815f-8bdd18c2936d.png">
 ```
   .btn._link{
@@ -189,6 +190,7 @@ Bootstrap 是一个没有特定产品的通用基础框架，即使在按钮设�
   }    
 ```
 `链接按钮 link`：文字是主题色，背景为透明的按钮。
+
 
 <img width="82" alt="qq20181228-135527 2x" src="https://user-images.githubusercontent.com/7261176/50504699-5a775980-0aaa-11e9-85ba-b3ca134ba48b.png">
 ```
@@ -203,6 +205,7 @@ Bootstrap 是一个没有特定产品的通用基础框架，即使在按钮设�
 
 `border`会默认使用文字的边框颜色，这里因为给按钮设定了边框，但是因为按钮高度是写死的，那么意味着，这里的文本会被往下推 1 个像素，这边需要对于不同的按钮做一个兼容。
 
+
 <img width="90" alt="qq20181228-135602 2x" src="https://user-images.githubusercontent.com/7261176/50504702-5c411d00-0aaa-11e9-821d-94b81c0a4cd6.png">
 ```
   .btn._capsule{
@@ -210,6 +213,7 @@ Bootstrap 是一个没有特定产品的通用基础框架，即使在按钮设�
   }    
 ```
 `胶囊按钮 capsule`：左右两边是圆角的按钮。
+
 
 <img width="371" alt="qq20181228-135703 2x" src="https://user-images.githubusercontent.com/7261176/50504704-5e0ae080-0aaa-11e9-8ff2-f4200243b74a.png">
 ```
@@ -226,7 +230,7 @@ Bootstrap 是一个没有特定产品的通用基础框架，即使在按钮设�
 
 ### 按钮状态 [_status.scss]
 
-|`:disabled 禁用状态` |  `:hover 鼠标移入` | `:active 鼠标按下` |  `:focus 获取焦点` | `._loading 加载状态` |
+`:disabled 禁用状态`, `:hover 鼠标移入`, `:active 鼠标按下`,  `:focus 获取焦点`, `._loading 加载状态`...
 
 按钮处于一些临界点的时候需要有一些特殊的状样式告知用户，按钮通常有以上的五个状态。
 
@@ -242,8 +246,6 @@ Bootstrap 是一个没有特定产品的通用基础框架，即使在按钮设�
   opacity: 0.5; 
 }
 ```
-
-
 
 ```SCSS
 /* 鼠标移入状态 */
