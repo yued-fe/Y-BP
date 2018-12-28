@@ -80,10 +80,10 @@
 
 | 类型 | 分类 |
 | ------ | ------ |
-|按钮主题 `_theme.scss`|`主按钮 primary`, `次按钮 secondary`, `成功按钮 success`, `危险按钮 danger`, `警告按钮 warning`|
-|按钮大小 `_size.scss`|`比大更大 largex`, `大按钮 large`, `默认按钮 default`, `中号按钮 middle`, `小按钮 small`, `比小更小 smallx`|
-|按钮形状 `_shape.scss`|`链接按钮 link`, `幽灵按钮 ghost`, `胶囊按钮 capsule`, `块状按钮 block`|
-|按钮状态 `_status.scss`|`禁用 disabled`, `鼠标移入 hover`, `鼠标按下 active`, `获取焦点 focus`, `加载 loading`|
+|按钮主题 「 _theme.scss 」|`主按钮 primary`, `次按钮 secondary`, `成功按钮 success`, `危险按钮 danger`, `警告按钮 warning`|
+|按钮大小 「 _size.scss 」|`比大更大 largex`, `大按钮 large`, `默认按钮 default`, `中号按钮 middle`, `小按钮 small`, `比小更小 smallx`|
+|按钮形状 「 _shape.scss 」|`链接按钮 link`, `幽灵按钮 ghost`, `胶囊按钮 capsule`, `块状按钮 block`|
+|按钮状态 「 _status.scss 」|`禁用 disabled`, `鼠标移入 hover`, `鼠标按下 active`, `获取焦点 focus`, `加载 loading`|
 
 基本上我们按钮主要可以分为以上四大类，而以上的几大类又可以互相的排列组合。
 
