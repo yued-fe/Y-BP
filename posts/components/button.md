@@ -88,7 +88,29 @@
 
 基本上我们按钮主要可以分为以上四大类，而以上的几大类又可以互相的排列组合。
 
+### 拓展方式
+
 比如 `disabled`, `warning`, `ghost`, `large` 可以表示一个禁用状态下的警告幽灵大按钮。
+
+#### 原生CSS
+
+```HTML
+<button type="button" disabled class="btn _warning _ghost _large">warning按钮</button>
+<a href="javascript:;" class="btn _warning _disabled _ghost _large">warning按钮</a>
+``` 
+在 CSS [规范](https://yued-fe.github.io/YFE-BP/posts/styleguide/css) 中有提到通过是用下滑线作为前缀的命名规则。
+
+#### React 
+
+```JSX
+<Button warning disabled ghost large>primary按钮</Button>
+```
+#### VUE
+
+```Vue
+<ui-button warning disabled ghost large>primary按钮</ui-button>
+```
+在类似 React 和 VUE 的场景中我们推荐直接使用 props ，当然组件内部的实现可以采用和原生 CSS 一样的逻辑。
 
 ### 按钮主题 「 _theme.scss 」
 
@@ -98,26 +120,12 @@ Bootstrap 是一个没有特定产品的通用基础框架，即使在按钮设�
 
 对于我们自己的产品来说，这么多的分类是不推荐的。我们期望的是，用更少的主题适应更多的场景，要达到这一点，也是需要多和设计师沟通的。以我们的经验， `主按钮 primary`, `次按钮 secondary`, `成功按钮 success`, `危险按钮 danger`, `警告按钮 warning` 这5种主题已经能涵盖很大一部分场景了。
 
-#### 原生CSS
-
-```HTML
-<button type="button" class="btn _primary">primary按钮</button>
-<a href="javascript:;" class="btn _primary">primary按钮</a>
-``` 
-在 CSS [规范](https://yued-fe.github.io/YFE-BP/posts/styleguide/css) 中有提到通过是用下滑线作为前缀的命名规则。
-
-#### React 
-
-```JSX
-<Button primary>primary按钮</Button>
+```SCSS
+.btn._primary{
+      color:$c_priamry;
+      background-color:$c_primary;
+}
 ```
-#### VUE
-
-```Vue
-<ui-button primary>primary按钮</ui-button>
-```
-
-在类似 React 和 VUE 的场景中我们推荐直接使用 props 去拓展组件 <Button primary />，当然组件内部的实现可以采用和原生 CSS 一样的逻辑。
 
 按钮的主题色，在实际开发中我们的颜色应该是基于全局的颜色参数去获取的。对于全局颜色参数的命名，我们推荐使用 c_ 前缀。
 
@@ -125,47 +133,62 @@ Bootstrap 是一个没有特定产品的通用基础框架，即使在按钮设�
 
 `比大更大 largex`, `大按钮 large`, `默认按钮 default`, `中号按钮 middle`, `小按钮 small`, `比小更小 smallx` …
 
-在大小的数量上和主题逻辑是一样的，建议使用更少的大小，适配更多的场景，我们推荐使用大，中，小，加默认共计四种样式。当然如果要拓展大话，我们建议通过类似衣服尺码 xs, xl 添加 x 的方式进行拓展 _largex。
+在大小的数量上和主题逻辑是一样的，建议使用更少的大小，适配更多的场景，我们推荐使用大，中，小，加默认共计四种样式。
 
-#### 原生CSS
+当然如果要拓展大话，我们建议通过类似衣服尺码 xs, xl 添加 x 的方式进行拓展 _largex。
 
-```HTML
-<button type="button" class="btn _large">大按钮</button>
-<a href="javascript:;" class="btn _large">大按钮</a>
-``` 
-#### React
+对于按钮尺寸是设定逻辑，我们建议遵从 Metiral Desing 的 8 point 规则(尺寸控制在8像素的倍数，实在不能满足也应该至少是4的倍数)。
 
-```JSX
-<Button large>大按钮</Button>
+```SCSS
+.btn{
+	height: 40px;
+	font-size: 16px;
+	line-height: 24px;
+	padding: 8px 16px;
+}
+
+.btn._middle{
+	height: 32px;
+	font-size: 14px;
+	line-height: 24px;
+	padding: 4px 12px;
+}
 ```
-#### VUE
 
-```Vue
-<ui-button large>大按钮</ui-button>
-```
+对于大小，不只是按钮的高宽设定，同时应该需要考虑到，按钮字号的变化。
 
 ### 按钮形状 「 _shape.scss 」
 
-`链接按钮 link`, `幽灵按钮 ghost`, `胶囊按钮 capsule`, `块状按钮 block`...
+|示例|类型|描述|
+|----|----|----|
+|1|`实心按钮 fill`|背景是主题色，文字是白色的按钮，因为太常用所以一般作为默认按钮的样式|
+|2|`链接按钮 link`|文字是主题色，背景为透明的按钮|
+|3|`幽灵按钮 ghost`|文字和边框是主题色，背景为透明的按钮|
+|4|`胶囊按钮 capsule`|左右两边是圆角的按钮|
+|5|`块状按钮 block`|占一行的按钮|
 
-按钮的形状，基本上业界常用的是以上四种方式，当然也不排除设计有定制的需求。
+按钮的形状，基本上业界常用的是以上五种方式，当然也不排除设计有定制的需求。
 
-#### 原生CSS
-
-```HTML
-<button type="button" class="btn _ghost">幽灵按钮</button>
-<a href="javascript:;" class="btn _ghost">幽灵按钮</a>
-``` 
-#### React
-
-```JSX
-<Button ghost size="large">幽灵按钮</Button>
+`实心按钮 fill`
 ```
-#### VUE
-
-```Vue
-<ui-button ghost size="large">幽灵按钮</ui-button>
+  .btn._fill{
+      color:#fff;
+  }    
 ```
+
+`链接按钮 link`
+```
+  .btn._link{
+      background-color: transparent;
+  }    
+```
+
+`幽灵按钮 ghost`
+
+`胶囊按钮 capsule`
+
+`块状按钮 block`
+
 
 ### 按钮状态 [_status.scss]
 
@@ -187,6 +210,15 @@ Bootstrap 是一个没有特定产品的通用基础框架，即使在按钮设�
   
   /* 修改透明度 */
   opacity: 0.5; 
+}
+```
+
+
+
+```SCSS
+/* 鼠标移入状态 */
+.btn._primary:hover{
+      background-color: darken($c_priamry,10%);
 }
 ```
 
