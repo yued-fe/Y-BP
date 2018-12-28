@@ -80,10 +80,10 @@
 
 | 类型 | 分类 |
 | ------ | ------ |
-|按钮主题 「 _theme.scss 」|`主按钮 primary`, `次按钮 secondary`, `成功按钮 success`, `危险按钮 danger`, `警告按钮 warning`|
-|按钮大小 「 _size.scss 」|`比大更大 largex`, `大按钮 large`, `默认按钮 default`, `中号按钮 middle`, `小按钮 small`, `比小更小 smallx`|
-|按钮形状 「 _shape.scss 」|`链接按钮 link`, `幽灵按钮 ghost`, `胶囊按钮 capsule`, `块状按钮 block`|
-|按钮状态 「 _status.scss 」|`禁用 disabled`, `鼠标移入 hover`, `鼠标按下 active`, `获取焦点 focus`, `加载 loading`|
+| 按钮主题 |`主按钮 primary`, `次按钮 secondary`, `成功按钮 success`, `危险按钮 danger`, `警告按钮 warning`|
+| 按钮大小 |`比大更大 largex`, `大按钮 large`, `默认按钮 default`, `中号按钮 middle`, `小按钮 small`, `比小更小 smallx`|
+| 按钮形状 |`链接按钮 link`, `幽灵按钮 ghost`, `胶囊按钮 capsule`, `块状按钮 block`|
+| 按钮状态 |`禁用 disabled`, `鼠标移入 hover`, `鼠标按下 active`, `获取焦点 focus`, `加载 loading`|
 
 基本上我们按钮主要可以分为以上四大类，而以上的几大类又可以互相的排列组合。
 
@@ -174,7 +174,6 @@ Bootstrap 是一个没有特定产品的通用基础框架，即使在按钮设�
 
 按钮的形状，基本上业界常用的是以上五种方式，当然也不排除设计有定制的需求。
 
-
 #### `实心按钮 fill`
 
 背景是主题色，文字是白色的按钮，因为太常用所以一般作为默认按钮的样式，所以在实际开发种我们不会另起一个`fill`的属性。
@@ -251,6 +250,26 @@ Bootstrap 是一个没有特定产品的通用基础框架，即使在按钮设�
 
 按钮处于一些临界点的时候需要有一些特殊的状样式告知用户，按钮通常有以上的五个状态。
 
+```css  
+  /* 偷懒但简洁 */ 
+  .btn{
+    transition:200ms;
+  } 
+  
+  /* 繁琐但性能更好 */
+  .btn{
+    transition:opacity 200ms, background-color 200ms, color 200ms;
+  }  
+```
+
+#### `:disabled 禁用状态`
+
+按钮不可用状态，通常是某些只执行一次的操作，在操作完成之后的状态。或者是需要某些特定触发条件才能激活按钮。
+禁用状态一般比正常按钮看起来要更弱一点。最简单的做法是添加一个透明度，这样的好处是不用给每个主题单独去设定一个禁用状态的颜色。
+当然每个主题单独设定的视觉效果会更好。
+
+<img width="173" alt="qq20181228-153338 2x" src="https://user-images.githubusercontent.com/7261176/50506934-39b50100-0ab6-11e9-978e-f26cbe6019c5.png">
+
 ```css
 .btn:disabled, .btn._disabled {
   /* 用css的方式让元素不可被选中，不支持该属性的需要用 js 阻止事件提交 */
@@ -263,13 +282,34 @@ Bootstrap 是一个没有特定产品的通用基础框架，即使在按钮设�
   opacity: 0.5; 
 }
 ```
+#### `:hover 鼠标移入`
+
+鼠标移入的状态和 `disabled` 的效果会有点相反，通常会让按钮变得更重一点。
+
+<img width="155" alt="qq20181228-153722 2x" src="https://user-images.githubusercontent.com/7261176/50507001-84cf1400-0ab6-11e9-844a-7e2aa111b428.png">
 
 ```SCSS
 /* 鼠标移入状态 */
 .btn._primary:hover{
       background-color: darken($c_priamry,10%);
+      color: darken($c_priamry,10%);
 }
 ```
+
+#### `:active 鼠标按下`
+
+`active` 是紧接着 `hover` 的一个状态，所以一般情况大家会直接忽略这个状态，直接使用 `hover` 的状态。这边为了区分这个状态，我们这边采用了变小的逻辑。 
+
+<img width="157" alt="qq20181228-154404 2x" src="https://user-images.githubusercontent.com/7261176/50507209-73d2d280-0ab7-11e9-98d1-459ef880fffc.png">
+
+```SCSS
+/* 鼠标移入状态 */
+.btn:active{
+   transform:scale(0.98);
+}
+```
+
+
 
 #### 原生CSS
 
