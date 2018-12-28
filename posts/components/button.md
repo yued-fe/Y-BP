@@ -78,7 +78,6 @@
 
 按钮基础样式设定完成之后，我们要做的就是思考按钮的拓展了。要拓展按钮，首先要先看看按钮的分类有哪些。
 
-|---|---|
 |按钮主题 `_theme.scss` | `主按钮 primary`, `次按钮 secondary`, `成功按钮 success`, `危险按钮 danger`, `警告按钮 warning` |
 |按钮大小 `_size.scss` | `比大更大 largex`, `大按钮 large`, `默认按钮 default`, `中号按钮 middle`, `小按钮 small`, `比小更小 smallx` |
 |按钮形状 `_shape.scss` | `链接按钮 link`, `幽灵按钮 ghost`, `胶囊按钮 capsule`, `块状按钮 block` |
