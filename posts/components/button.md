@@ -174,25 +174,37 @@ Bootstrap 是一个没有特定产品的通用基础框架，即使在按钮设�
 
 按钮的形状，基本上业界常用的是以上五种方式，当然也不排除设计有定制的需求。
 
+
+#### `实心按钮 fill`
+
+背景是主题色，文字是白色的按钮，因为太常用所以一般作为默认按钮的样式，所以在实际开发种我们不会另起一个`fill`的属性。
+
 <img width="82" alt="qq20181228-135519 2x" src="https://user-images.githubusercontent.com/7261176/50504697-58ad9600-0aaa-11e9-9662-cf61fd78299e.png">
+
 ```
   .btn._fill{
       color:#fff;
   }    
 ```
-`实心按钮 fill`：背景是主题色，文字是白色的按钮，因为太常用所以一般作为默认按钮的样式，所以在实际开发种我们不会另起一个`fill`的属性。
 
+#### `链接按钮 link`
+
+文字是主题色，背景为透明的按钮
 
 <img width="82" alt="qq20181228-135634 2x" src="https://user-images.githubusercontent.com/7261176/50504703-5cd9b380-0aaa-11e9-815f-8bdd18c2936d.png">
+
 ```
   .btn._link{
       background-color: transparent;
   }    
 ```
-`链接按钮 link`：文字是主题色，背景为透明的按钮。
 
+#### `幽灵按钮 ghost`
+
+文字和边框是主题色，背景为透明的按钮。
 
 <img width="82" alt="qq20181228-135527 2x" src="https://user-images.githubusercontent.com/7261176/50504699-5a775980-0aaa-11e9-85ba-b3ca134ba48b.png">
+
 ```
   .btn._ghost{
       background-color: transparent;
@@ -201,21 +213,27 @@ Bootstrap 是一个没有特定产品的通用基础框架，即使在按钮设�
       line-height: 24px - 1px ;
   } 
 ```
-`幽灵按钮 ghost`：文字和边框是主题色，背景为透明的按钮。
 
 `border`会默认使用文字的边框颜色，这里因为给按钮设定了边框，但是因为按钮高度是写死的，那么意味着，这里的文本会被往下推 1 个像素，这边需要对于不同的按钮做一个兼容。
 
+#### `胶囊按钮 capsule`
+
+左右两边是圆角的按钮。
 
 <img width="90" alt="qq20181228-135602 2x" src="https://user-images.githubusercontent.com/7261176/50504702-5c411d00-0aaa-11e9-821d-94b81c0a4cd6.png">
+
 ```
   .btn._capsule{
     border-radius:100%;
   }    
 ```
-`胶囊按钮 capsule`：左右两边是圆角的按钮。
 
+#### `块状按钮 block`
+
+占一行的按钮。
 
 <img width="371" alt="qq20181228-135703 2x" src="https://user-images.githubusercontent.com/7261176/50504704-5e0ae080-0aaa-11e9-8ff2-f4200243b74a.png">
+
 ```
   .btn._block{
     display:block;
@@ -226,7 +244,6 @@ Bootstrap 是一个没有特定产品的通用基础框架，即使在按钮设�
     /* padding-right:0; */
   }    
 ```
-`块状按钮 block`：占一行的按钮。
 
 ### 按钮状态 [_status.scss]
 
