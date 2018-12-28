@@ -261,11 +261,12 @@ Bootstrap 是一个没有特定产品的通用基础框架，即使在按钮设�
     transition:opacity 200ms, background-color 200ms, color 200ms;
   }  
 ```
+因为按钮的状态切换，通常是从一个状态到另一个状态，为了让这个状态过度的更加自然，建议添加上 `transition`属性。
 
 #### `:disabled 禁用状态`
 
 按钮不可用状态，通常是某些只执行一次的操作，在操作完成之后的状态。或者是需要某些特定触发条件才能激活按钮。
-禁用状态一般比正常按钮看起来要更弱一点。最简单的做法是添加一个透明度，这样的好处是不用给每个主题单独去设定一个禁用状态的颜色。
+禁用状态一般比正常按钮看起来要更弱一点。最简单的做法是降低透明度，这样的好处是不用给每个主题单独去设定一个禁用状态的颜色。
 当然每个主题单独设定的视觉效果会更好。
 
 <img width="173" alt="qq20181228-153338 2x" src="https://user-images.githubusercontent.com/7261176/50506934-39b50100-0ab6-11e9-978e-f26cbe6019c5.png">
@@ -284,7 +285,7 @@ Bootstrap 是一个没有特定产品的通用基础框架，即使在按钮设�
 ```
 #### `:hover 鼠标移入`
 
-鼠标移入的状态和 `disabled` 的效果会有点相反，通常会让按钮变得更重一点。
+鼠标移入的状态和 `disabled` 的效果会有点相反，通常会让按钮变得更重一点。为了统一，我们建议使用，css 预处理器的 `darken` 函数，来让我们的主题色，加深 `10%`。
 
 <img width="155" alt="qq20181228-153722 2x" src="https://user-images.githubusercontent.com/7261176/50507001-84cf1400-0ab6-11e9-844a-7e2aa111b428.png">
 
@@ -298,7 +299,7 @@ Bootstrap 是一个没有特定产品的通用基础框架，即使在按钮设�
 
 #### `:active 鼠标按下`
 
-`active` 是紧接着 `hover` 的一个状态，所以一般情况大家会直接忽略这个状态，直接使用 `hover` 的状态。这边为了区分这个状态，我们这边采用了变小的逻辑。 
+`active` 是紧接着 `hover` 的一个状态，所以偷懒的话我们忽略这个状态，直接沿用 `hover` 的状态。但是像做得更好的 Metiarl Design 他们采用的是涟漪水波的效果。而我们这边采用了更简单的按下变小的逻辑「 感觉很像你拿手把按钮压扁了 」。这个效果可以和设计师沟通，权衡一下收益。
 
 <img width="157" alt="qq20181228-154404 2x" src="https://user-images.githubusercontent.com/7261176/50507209-73d2d280-0ab7-11e9-98d1-459ef880fffc.png">
 
@@ -309,22 +310,8 @@ Bootstrap 是一个没有特定产品的通用基础框架，即使在按钮设�
 }
 ```
 
+#### `:focus 获取焦点`
 
-
-#### 原生CSS
-
-```HTML
-<button type="button" disabled class="btn">禁用按钮</button>
-<a href="javascript:;" disabled class="btn">幽灵按钮</a>
-``` 
-#### React
-
-```JSX
-<Button disabled>禁用按钮</Button>
-```
-
-#### VUE
-```Vue
-<ui-button disabled>禁用按钮</ui-button>
-```
+`focus` 也是容易
+`focus` 也是
 
