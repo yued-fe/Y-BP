@@ -32,6 +32,54 @@
 
 这边基于**Bootstrap** [按钮组件](https://v4.bootcss.com/docs/4.0/components/buttons/)，结合我们实际的经验带大家看看，按钮的封装和拓展逻辑。文中的代码是为了解释原理的伪代码，实际开发会为了减少代码量，不会写得这么啰嗦。
 
+### 按钮拓展方式
+
+按钮基础样式设定完成之后，我们要做的就是思考按钮的拓展了。要拓展按钮，首先要先看看按钮的分类有哪些。
+
+| 类型 | 分类 |
+| ------ | ------ |
+| 按钮主题 |`主按钮 primary`, `次按钮 secondary`, `成功按钮 success`, `危险按钮 danger`, `警告按钮 warning`|
+| 按钮大小 |`比大更大 largex`, `大按钮 large`, `默认按钮 default`, `中号按钮 middle`, `小按钮 small`, `比小更小 smallx`|
+| 按钮形状 |`链接按钮 link`, `幽灵按钮 ghost`, `胶囊按钮 capsule`, `块状按钮 block`|
+| 按钮状态 |`禁用 disabled`, `鼠标移入 hover`, `鼠标按下 active`, `获取焦点 focus`, `加载 loading`|
+
+基本上我们按钮主要可以分为以上四大类，而以上的几大类又可以互相的排列组合。
+
+比如 `disabled`, `warning`, `ghost`, `large` 可以表示一个禁用状态下的警告幽灵大按钮。
+
+#### 原生CSS
+
+```HTML
+<button type="button" disabled class="btn _warning _ghost _large">warning按钮</button>
+<a href="javascript:;" class="btn _warning _disabled _ghost _large">warning按钮</a>
+``` 
+在 CSS [规范](https://yued-fe.github.io/YFE-BP/posts/styleguide/css) 中有提到通过是用下滑线作为前缀的命名规则。
+
+#### React 
+
+```JSX
+<Button warning disabled ghost large>primary按钮</Button>
+```
+#### VUE
+
+```Vue
+<ui-button warning disabled ghost large>primary按钮</ui-button>
+```
+在类似 React 和 VUE 的场景中我们推荐直接使用 props ，当然组件内部的实现可以采用和原生 CSS 一样的逻辑。
+
+看到这里有的同学可能会对于我们的拓展方式感到某些疑惑，因为从可读性来说以下的方式显然更加的优雅。
+
+```JSX
+<Button theme="warning" status="disabled" shape="ghost" size="large">primary按钮</Button>
+```
+对于这个问题我们内部也有一些讨论，这种写法是更加的具有可读性，而且自创的这些名称也不容易污染我们的按钮属性。
+
+1. 因为原生对于按钮`disabled`的拓展方式是使用的 `<button type="button" disabled>button</button>`。我们更青睐沿用原生的方式，而不是自创一种我们以为更加优雅的逻辑；
+2. 虽然在不熟悉这个按钮组件的情况下可读性是变差了，但是对于熟悉我们整个按钮逻辑的同学来说确实更加方便和简洁的，并且通常我们也不会同时在一个按钮上操作这么多的属性和状态。在这一点上，我们选择了方便使用方；
+3. 在我们的 `shape` 的这个分类当中，我们的`block`状态其实可以和另外几个状态组合，此时一个shape字段满足不了，就需要开发新的兼容逻辑，而这自然提高了代码的复杂度；
+
+基于以上 3点考虑，我们最终还是选择了单属性控制的逻辑。
+
 ### 按钮基础样式 「 _base.scss 」
 
 ```css
@@ -71,56 +119,6 @@
 }          
 ```
 对于按钮基础样式，因为没有涉及到按钮的拓展性，所以大家的样式基本都大同小异。
-
-### 按钮分类
-
-按钮基础样式设定完成之后，我们要做的就是思考按钮的拓展了。要拓展按钮，首先要先看看按钮的分类有哪些。
-
-| 类型 | 分类 |
-| ------ | ------ |
-| 按钮主题 |`主按钮 primary`, `次按钮 secondary`, `成功按钮 success`, `危险按钮 danger`, `警告按钮 warning`|
-| 按钮大小 |`比大更大 largex`, `大按钮 large`, `默认按钮 default`, `中号按钮 middle`, `小按钮 small`, `比小更小 smallx`|
-| 按钮形状 |`链接按钮 link`, `幽灵按钮 ghost`, `胶囊按钮 capsule`, `块状按钮 block`|
-| 按钮状态 |`禁用 disabled`, `鼠标移入 hover`, `鼠标按下 active`, `获取焦点 focus`, `加载 loading`|
-
-基本上我们按钮主要可以分为以上四大类，而以上的几大类又可以互相的排列组合。
-
-### 拓展方式
-
-比如 `disabled`, `warning`, `ghost`, `large` 可以表示一个禁用状态下的警告幽灵大按钮。
-
-#### 原生CSS
-
-```HTML
-<button type="button" disabled class="btn _warning _ghost _large">warning按钮</button>
-<a href="javascript:;" class="btn _warning _disabled _ghost _large">warning按钮</a>
-``` 
-在 CSS [规范](https://yued-fe.github.io/YFE-BP/posts/styleguide/css) 中有提到通过是用下滑线作为前缀的命名规则。
-
-#### React 
-
-```JSX
-<Button warning disabled ghost large>primary按钮</Button>
-```
-#### VUE
-
-```Vue
-<ui-button warning disabled ghost large>primary按钮</ui-button>
-```
-在类似 React 和 VUE 的场景中我们推荐直接使用 props ，当然组件内部的实现可以采用和原生 CSS 一样的逻辑。
-
-看到这里有的同学可能会对于我们的拓展方式感到某些疑惑，因为从可读性来说以下的方式显然更加的优雅。
-
-```JSX
-<Button theme="warning" status="disabled" shape="ghost" size="large">primary按钮</Button>
-```
-对于这个问题我们内部也有一些讨论，这种写法是更加的具有可读性，而且自创的这些名称也不容易污染我们的按钮属性。
-
-1. 因为原生对于按钮`disabled`的拓展方式是使用的 `<button type="button" disabled>button</button>`。我们更青睐沿用原生的方式，而不是自创一种我们以为更加优雅的逻辑；
-2. 虽然在不熟悉这个按钮组件的情况下可读性是变差了，但是对于熟悉我们整个按钮逻辑的同学来说确实更加方便和简洁的，并且通常我们也不会同时在一个按钮上操作这么多的属性和状态。在这一点上，我们选择了方便使用方；
-3. 在我们的 `shape` 的这个分类当中，我们的`block`状态其实可以和另外几个状态组合，此时一个shape字段满足不了，就需要开发新的兼容逻辑，而这自然提高了代码的复杂度；
-
-基于以上 3点考虑，我们最终还是选择了单属性控制的逻辑。
 
 ### 按钮主题 「 _theme.scss 」
 
