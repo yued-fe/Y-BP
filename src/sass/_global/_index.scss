@@ -2,3 +2,15 @@
 @import '_reset.scss';
 @import '_acss.scss';
 @import '_base.scss';
+
+/* 规范定义的内间距 */
+@include acss-padding((2, 4, 8, 12, 16, 20, 24, 32));
+
+/* 规范定义的外间距 */
+@include acss-margin((2, 4, 8, 12, 16, 20, 24, 32, 48));
+
+/* 规范定义的字号 */
+@include acss-font-size((0, 12, 14, 16, 18, 20, 24, 32));
+
+/* 规范定义的行高 */
+@include acss-line-height((16, 20, 24, 32));
