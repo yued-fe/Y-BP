@@ -25,11 +25,6 @@
 
 1. [Button 「 按钮 」](./posts/components/button)
 2. [Dialog 「 弹窗 」](https://yued-fe.github.io/YFE-BP/components/Dialog/index.html)
-3. Toast 「 轻提示 」
-4. Tooltip 「 气泡提示 」
-5. Icon 「 图标 」
-6. Img 「 图片 」
-7. Form 「 表单 」
 
 ## 布局
 1. 左右布局
