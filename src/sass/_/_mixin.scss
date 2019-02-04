@@ -70,16 +70,16 @@
 @mixin acss-margin($gutters) {
   @each $gutter in $gutters {
     .mt#{$gutter} {
-      margin-top: $gutter*1px;
+      margin-top: unit($gutter);
     }
     .mr#{$gutter} {
-      margin-right: $gutter*1px;
+      margin-right: unit($gutter);
     }
     .mb#{$gutter} {
-      margin-bottom: $gutter*1px;
+      margin-bottom: unit($gutter);
     }
     .ml#{$gutter} {
-      margin-left: $gutter*1px;
+      margin-left: unit($gutter);
     }
   }
 }
@@ -88,16 +88,16 @@
 @mixin acss-padding($gutters) {
   @each $gutter in $gutters {
     .pt#{$gutter} {
-      padding-top: $gutter*1px;
+      padding-top: unit($gutter);
     }
     .pr#{$gutter} {
-      padding-right: $gutter*1px;
+      padding-right: unit($gutter);
     }
     .pb#{$gutter} {
-      padding-bottom: $gutter*1px;
+      padding-bottom: unit($gutter);
     }
     .pl#{$gutter} {
-      padding-left: $gutter*1px;
+      padding-left: unit($gutter);
     }
   }
 }

@@ -8,7 +8,7 @@
  * 4. 小数点用d（dot）表示  `.lh1d2{ line-height:1.2; }`;
  */
 
-@import '../_init/_init.scss';
+@import '../_/_index.scss';
 
 /* 规范定义的内间距 */
 @include acss-padding((2, 4, 8, 12, 16, 20, 24, 32));
