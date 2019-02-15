@@ -27,10 +27,10 @@
 2. [Dialog 「 弹窗 」](https://yued-fe.github.io/YFE-BP/components/Dialog/index.html)
 
 ## 布局
-1. 左右布局
-2. 列表布局
+1. [左右布局](http://ziven27.github.io/layout/pages/fl-fr.html)
+2. [列表布局](http://ziven27.github.io/layout/pages/list.html)
 3. 删格布局
-4. Media布局 
+4. [Media布局](http://ziven27.github.io/layout/pages/fl-cell.html) 
 
 ## 私密小技巧
 1. [ 移动端REM适配 ](https://www.zhangxinxu.com/wordpress/2016/08/vw-viewport-responsive-layout-typography/)
