@@ -9,9 +9,9 @@
 
 ## 代码规范
 
-- [HTML 规范](./posts/styleguide/html)
-- [CSS 规范](./posts/styleguide/css)
-- [JS 规范](./posts/styleguide/js)
+- [HTML 规范](https://yued-fe.github.io/YFE-BP/posts/styleguide/html)
+- [CSS 规范](https://yued-fe.github.io/YFE-BP//posts/styleguide/css)
+- [JS 规范](https://yued-fe.github.io/YFE-BP//posts/styleguide/js)
 
 ## 代码规范参考
 
@@ -23,7 +23,7 @@
 
 ## 组件
 
-1. [Button 「 按钮 」](./posts/components/button)
+1. [Button 「 按钮 」](https://yued-fe.github.io/YFE-BP/posts/components/button)
 2. [Dialog 「 弹窗 」](https://yued-fe.github.io/YFE-BP/components/Dialog/index.html)
 
 ## 布局
