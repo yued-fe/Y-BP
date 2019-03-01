@@ -34,3 +34,7 @@
 
 ## 私密小技巧
 1. [ 移动端REM适配 ](https://www.zhangxinxu.com/wordpress/2016/08/vw-viewport-responsive-layout-typography/)
+
+## 插件
+
+1. 无线滚动：[react-infinite-scroll-component ](https://github.com/ankeetmaini/react-infinite-scroll-component)
