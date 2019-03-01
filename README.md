@@ -38,3 +38,4 @@
 ## 插件
 
 1. 无线滚动：[react-infinite-scroll-component ](https://github.com/ankeetmaini/react-infinite-scroll-component)
+2. 瀑布流： [react-responsive-masonry](https://github.com/xuopled/react-responsive-masonry)
