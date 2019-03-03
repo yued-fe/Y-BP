@@ -30,7 +30,7 @@
 1. [左右布局](http://ziven27.github.io/layout/pages/fl-fr.html)
 2. [列表布局](http://ziven27.github.io/layout/pages/list.html)
 3. 删格布局
-4. [Media布局](http://ziven27.github.io/layout/pages/fl-cell.html) 
+4. [Media布局](https://codepen.io/ziven27/pen/EMKzza) 
 5. [不定高元素垂直居中](https://codepen.io/ziven27/pen/Ygqbxq?editors=1100)
 
 ## 私密小技巧
