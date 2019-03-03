@@ -28,7 +28,7 @@
 
 ## 布局
 1. [左右布局](https://codepen.io/ziven27/pen/pYyXoB?editors=1100)
-2. [列表布局](http://ziven27.github.io/layout/pages/list.html)
+2. [列表布局](https://codepen.io/ziven27/pen/rReExa?editors=1100)
 3. 删格布局
 4. [Media布局](https://codepen.io/ziven27/pen/EMKzza?editors=1100) 
 5. [不定高元素垂直居中](https://codepen.io/ziven27/pen/Ygqbxq?editors=1100)
