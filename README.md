@@ -31,6 +31,7 @@
 2. [列表布局](http://ziven27.github.io/layout/pages/list.html)
 3. 删格布局
 4. [Media布局](http://ziven27.github.io/layout/pages/fl-cell.html) 
+5. [不定高元素垂直居中](http://www.ziven27.cn/layout/pages/vm.html)
 
 ## 私密小技巧
 1. [ 移动端REM适配 ](https://www.zhangxinxu.com/wordpress/2016/08/vw-viewport-responsive-layout-typography/)
