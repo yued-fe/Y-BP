@@ -38,7 +38,7 @@
 
 ## jquery 插件
 
-1. [打标签](https://github.com/aehlke/tag-it)
+1. [打标签](https://github.com/Pixabay/jQuery-tagEditor)
 
 ## react 插件
 
