@@ -38,7 +38,7 @@
 
 ## jquery 插件
 
-1. 打标签[jQuery-tagEditor](https://github.com/Pixabay/jQuery-tagEditor)
+1. 打标签[taggingJS](http://sniperwolf.github.io/taggingJS/) 其它的都有jquery ui的依赖
 
 ## react 插件
 
