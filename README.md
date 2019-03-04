@@ -23,7 +23,7 @@
 
 ## 组件
 
-1. [Button 「 按钮 」](https://yued-fe.github.io/YFE-BP/posts/components/button) [代码演示|科学上网](https://codesandbox.io/s/82nvx28459)
+1. [Button 「 按钮 」](https://yued-fe.github.io/YFE-BP/posts/components/button) [代码演示-科学上网](https://codesandbox.io/s/82nvx28459)
 2. [Dialog 「 弹窗 」](https://yued-fe.github.io/YFE-BP/components/Dialog/index.html)
 
 ## 布局
