@@ -35,15 +35,25 @@
 ## 私密小技巧
 1. [ 移动端REM适配 ](https://www.zhangxinxu.com/wordpress/2016/08/vw-viewport-responsive-layout-typography/)
 
-## Jquery 插件
 
+
+## 无UI依赖组件库 「 YF 」
+
+| 功能   | 名称 |  推荐人 | 打分 | 推荐理由 |
+|--------|-------------|------|:------:|------|
+| 按钮 | [yf-button](https://github.com/yued-fe/yf-button)| [@ziven27](https://github.com/ziven27/) | 5 | 工程化思维的按钮组件，原生，REACT,VUE |
+
+## 插件推荐
+
+
+### Jquery
 
 | 功能   | 名称 |  推荐人 | 打分 | 推荐理由 |
 |--------|-------------|------|:------:|------|
 | 打标签 | [taggingJS](https://github.com/axios/axios)| [@ziven27](https://github.com/ziven27/) | 4 | 其它的都有jquery ui的依赖 |
 
 
-## React 插件
+### React
 
 | 功能   | 名称 |  推荐人 | 打分 | 推荐理由 |
 |--------|-------------|------|:------:|------|
@@ -52,4 +62,5 @@
 | Ajax请求 | [axio](https://github.com/axios/axios)| [@ziven27](https://github.com/ziven27/) | 5 | 接口简单 |
 | 头像裁剪 | [react-avatar-editor](https://github.com/mosch/react-avatar-editor)| [@ziven27](https://github.com/ziven27/) | 5 | 接口简单，demo详尽 |
 | 区域滑块 | [react-rangeslider](https://github.com/whoisandy/react-rangeslider)| [@ziven27](https://github.com/ziven27/) | 5 | CSS 自定义性高 |
-| 图片裁剪 | [react-image-crop](https://github.com/DominicTobias/react-image-crop)| [@ziven27](https://github.com/ziven27/) | 5 | - |
+| 路由 | [@reach/router](https://reach.tech/router)| [@ziven27](https://github.com/ziven27/) | 5 | react-router原作者重新做的一个插件 |
+
