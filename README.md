@@ -52,13 +52,13 @@
 
 | 功能   | 名称 |  推荐人 | 推荐理由 |
 |--------|-------------|------|------|
-| 无线滚动 | [react-infinite-scroll-component](https://github.com/ankeetmaini/react-infinite-scroll-component)| [@ziven27](https://github.com/ziven27/) | 4 | 星数多 |
-| 瀑布流 | [react-responsive-masonry](https://github.com/xuopled/react-responsive-masonry)| [@ziven27](https://github.com/ziven27/) | 4 | 自定义性高 |
-| Ajax请求 | [axio](https://github.com/axios/axios)| [@ziven27](https://github.com/ziven27/) | 5 | 接口简单 |
-| 头像裁剪 | [react-avatar-editor](https://github.com/mosch/react-avatar-editor)| [@ziven27](https://github.com/ziven27/) | 5 | 接口简单，demo详尽 |
-| 区域滑块 | [react-rangeslider](https://github.com/whoisandy/react-rangeslider)| [@ziven27](https://github.com/ziven27/) | 5 | CSS 自定义性高 |
-| 路由 | [@reach/router](https://reach.tech/router)| [@ziven27](https://github.com/ziven27/) | 5 | react-router原作者重新做的一个插件 |
-| 移动端touch | [react-hammerjs](https://github.com/JedWatson/react-hammerjs)| [@ziven27](https://github.com/ziven27/) | 5 | 支持的事件丰富 |
+| 无线滚动 | [react-infinite-scroll-component](https://github.com/ankeetmaini/react-infinite-scroll-component)| [@ziven27](https://github.com/ziven27/) | 星数多 |
+| 瀑布流 | [react-responsive-masonry](https://github.com/xuopled/react-responsive-masonry)| [@ziven27](https://github.com/ziven27/) | 自定义性高 |
+| Ajax请求 | [axio](https://github.com/axios/axios)| [@ziven27](https://github.com/ziven27/) | 接口简单 |
+| 头像裁剪 | [react-avatar-editor](https://github.com/mosch/react-avatar-editor)| [@ziven27](https://github.com/ziven27/) |  接口简单，demo详尽 |
+| 区域滑块 | [react-rangeslider](https://github.com/whoisandy/react-rangeslider)| [@ziven27](https://github.com/ziven27/) |  CSS 自定义性高 |
+| 路由 | [@reach/router](https://reach.tech/router)| [@ziven27](https://github.com/ziven27/) | react-router原作者重新做的一个插件 |
+| 移动端touch | [react-hammerjs](https://github.com/JedWatson/react-hammerjs)| [@ziven27](https://github.com/ziven27/) | 支持的事件丰富 |
 
 ## 插件diss
 
