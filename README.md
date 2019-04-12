@@ -35,11 +35,11 @@
 ## 私密小技巧
 1. [ 移动端REM适配 ](https://www.zhangxinxu.com/wordpress/2016/08/vw-viewport-responsive-layout-typography/)
 
-## jquery 插件
+## Jquery 插件
 
 1. 打标签[taggingJS](http://sniperwolf.github.io/taggingJS/) 其它的都有jquery ui的依赖
 
-## react 插件
+## React 插件
 
 1. 无线滚动：[react-infinite-scroll-component ](https://github.com/ankeetmaini/react-infinite-scroll-component)
 2. 瀑布流： [react-responsive-masonry](https://github.com/xuopled/react-responsive-masonry)
