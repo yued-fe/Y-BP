@@ -3,7 +3,7 @@
 1. 从零开始建一个网站的前端代码，第一步应该思考什么？
 2. 要写一个按钮组件，应该从哪里开始？
 3. 要建立一个前端代码库，应该怎么组织自己的代码？
-4. 公用的代码文件夹，应该叫 common，global，还是base？
+4. 我要实现一个图片裁剪的功能，有什么插件推荐啊？
 
 以上问题由我们来告诉你答案？
 
@@ -41,7 +41,7 @@
 
 | 功能   | 名称 |  推荐人 | 打分 | 推荐理由 |
 |--------|-------------|------|:------:|------|
-| 按钮 | [yf-button](https://github.com/yued-fe/yf-button)| [@ziven27](https://github.com/ziven27/) | 5 | 工程化思维的按钮组件，原生，REACT,VUE |
+| 按钮 | [yf-button](https://github.com/yued-fe/yf-button)| [@ziven27](https://github.com/ziven27/) | 5 | 工程化思维的按钮组件，原生，REACT，VUE |
 
 ## 插件推荐
 
