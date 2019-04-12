@@ -37,6 +37,7 @@
 |--------|-------------|------|:------:|------|
 | 按钮 | [yf-button](https://github.com/yued-fe/yf-button)| [@ziven27](https://github.com/ziven27/) | 5 | 工程化思维的按钮组件，原生，REACT，VUE |
 
+
 ## 插件推荐
 
 
@@ -57,4 +58,10 @@
 | 头像裁剪 | [react-avatar-editor](https://github.com/mosch/react-avatar-editor)| [@ziven27](https://github.com/ziven27/) | 5 | 接口简单，demo详尽 |
 | 区域滑块 | [react-rangeslider](https://github.com/whoisandy/react-rangeslider)| [@ziven27](https://github.com/ziven27/) | 5 | CSS 自定义性高 |
 | 路由 | [@reach/router](https://reach.tech/router)| [@ziven27](https://github.com/ziven27/) | 5 | react-router原作者重新做的一个插件 |
+| 移动端touch | [react-hammerjs](https://github.com/JedWatson/react-hammerjs)| [@ziven27](https://github.com/ziven27/) | 5 | 支持的事件丰富 |
 
+## 插件diss
+
+| 功能   | 名称 |  Diss人 | Diss理由 |
+|--------|-------------|------|------|
+| helmet | [react-helmet](https://github.com/nfl/react-helmet)| [@ziven27](https://github.com/ziven27/) | 有BUG，要升级到^6.0.0-beta |
