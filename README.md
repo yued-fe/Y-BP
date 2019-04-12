@@ -11,7 +11,7 @@
 
 - [HTML 规范](https://yued-fe.github.io/YFE-BP/posts/styleguide/html)
 - [CSS 规范](https://yued-fe.github.io/YFE-BP//posts/styleguide/css)
-- [JS 规范](https://yued-fe.github.io/YFE-BP//posts/styleguide/js)
+- [JS 规范](https://yued-fe.github.io/YFE-BP/posts/styleguide/js)
 
 ## 代码规范参考
 
@@ -21,12 +21,7 @@
 4. [Isobar](http://coderlmn.github.io/code-standards/)
 5. [网易](http://nec.netease.com/standard)
 
-## 组件
-
-1. [Button 「 按钮 」](https://yued-fe.github.io/YFE-BP/posts/components/button) [代码演示-科学上网](https://codesandbox.io/s/82nvx28459)
-2. [Dialog 「 弹窗 」](https://yued-fe.github.io/YFE-BP/components/Dialog/index.html)
-
-## 布局
+## CSS 布局
 1. [左右布局](https://codepen.io/ziven27/pen/pYyXoB?editors=1100)
 2. [列表布局](https://codepen.io/ziven27/pen/rReExa?editors=1100)
 3. [Media布局](https://codepen.io/ziven27/pen/EMKzza?editors=1100) 
@@ -34,7 +29,6 @@
 
 ## 私密小技巧
 1. [ 移动端REM适配 ](https://www.zhangxinxu.com/wordpress/2016/08/vw-viewport-responsive-layout-typography/)
-
 
 
 ## 无UI依赖组件库 「 YF 」
