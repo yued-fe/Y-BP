@@ -43,15 +43,15 @@
 
 ### Jquery
 
-| 功能   | 名称 |  推荐人 | 打分 | 推荐理由 |
-|--------|-------------|------|:------:|------|
+| 功能   | 名称 |  推荐人 | 推荐理由 |
+|--------|-------------|------|------|
 | 打标签 | [taggingJS](https://github.com/axios/axios)| [@ziven27](https://github.com/ziven27/) | 4 | 其它的都有jquery ui的依赖 |
 
 
 ### React
 
-| 功能   | 名称 |  推荐人 | 打分 | 推荐理由 |
-|--------|-------------|------|:------:|------|
+| 功能   | 名称 |  推荐人 | 推荐理由 |
+|--------|-------------|------|------|
 | 无线滚动 | [react-infinite-scroll-component](https://github.com/ankeetmaini/react-infinite-scroll-component)| [@ziven27](https://github.com/ziven27/) | 4 | 星数多 |
 | 瀑布流 | [react-responsive-masonry](https://github.com/xuopled/react-responsive-masonry)| [@ziven27](https://github.com/ziven27/) | 4 | 自定义性高 |
 | Ajax请求 | [axio](https://github.com/axios/axios)| [@ziven27](https://github.com/ziven27/) | 5 | 接口简单 |
