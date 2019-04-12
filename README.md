@@ -45,7 +45,7 @@
 
 | 功能   | 名称 |  推荐人 | 推荐理由 |
 |--------|-------------|------|------|
-| 打标签 | [taggingJS](https://github.com/axios/axios)| [@ziven27](https://github.com/ziven27/) | 4 | 其它的都有jquery ui的依赖 |
+| 打标签 | [taggingJS](https://github.com/axios/axios)| [@ziven27](https://github.com/ziven27/) | 其它找到的几个的都有jquery ui的依赖 |
 
 
 ### React
