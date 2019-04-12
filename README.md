@@ -41,6 +41,8 @@
 
 ## React 插件
 
-1. 无线滚动：[react-infinite-scroll-component ](https://github.com/ankeetmaini/react-infinite-scroll-component)
-2. 瀑布流： [react-responsive-masonry](https://github.com/xuopled/react-responsive-masonry)
-2. ajax请求： [axio](https://github.com/axios/axios)
+| 名称   | 地址 |  推荐人 | 打分 | 推荐理由 |
+|--------|-------------|------|------|------|
+| 无线滚动 | [react-infinite-scroll-component](https://github.com/ankeetmaini/react-infinite-scroll-component)| @ziven27 | 5 | 好用 |
+| 瀑布流 | [react-responsive-masonry](https://github.com/xuopled/react-responsive-masonry)| @ziven27 | 5 | 好用 |
+| Ajax请求 | [axio](https://github.com/axios/axios)| @ziven27 | 5 | 好用 |
