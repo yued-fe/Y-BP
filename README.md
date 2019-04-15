@@ -45,7 +45,7 @@
 | 富文本编辑器 | [summernote](https://summernote.org/)| [@chengbapi](https://github.com/chengbapi/) | API清晰简单 |
 | 数据可视化 | [echarts](https://github.com/apache/incubator-echarts)| [@chengbapi](https://github.com/chengbapi/) | API清晰简单 |
 | 颜色 | [color](https://github.com/Qix-/color)| [@chengbapi](https://github.com/chengbapi/) | 功能强大 |
-| 流程控制 | [async]（https://github.com/caolan/async)| [@chengbapi](https://github.com/chengbapi/) | 社区支持好 |
+| 流程控制 | [async](https://github.com/caolan/async)| [@chengbapi](https://github.com/chengbapi/) | 社区支持好 |
 | 防xss | [js-xss](https://github.com/leizongmin/js-xss)| [@chengbapi](https://github.com/chengbapi/) | 功能稳定、够用 |
 
 ### Jquery
