@@ -39,6 +39,9 @@
 
 
 ## 插件推荐
+
+| 功能   | 名称 |  推荐人 | 推荐理由 |
+|--------|-------------|------|------|
 | 富文本编辑器 | [summernote](https://summernote.org/)| [@chengbapi](https://github.com/chengbapi/) | API清晰简单 |
 | 数据可视化 | [echarts](https://github.com/apache/incubator-echarts)| [@chengbapi](https://github.com/chengbapi/) | API清晰简单 |
 | 颜色 | [color](https://github.com/Qix-/color)| [@chengbapi](https://github.com/chengbapi/) | 功能强大 |
