@@ -53,6 +53,7 @@
 | 功能   | 名称 |  推荐人 | 推荐理由 |
 |--------|-------------|------|------|
 | 打标签 | [taggingJS](https://github.com/axios/axios)| [@ziven27](https://github.com/ziven27/) | 其它找到的几个的都有jquery ui的依赖 |
+| 表单校验 | [jqueryvalidation](https://jqueryvalidation.org/)| [@ziven27](https://github.com/ziven27/) | 功能强大，自定义性很高 |
 
 
 ### React
