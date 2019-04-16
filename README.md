@@ -48,7 +48,7 @@
 | 流程控制 | [async](https://github.com/caolan/async)| [@chengbapi](https://github.com/chengbapi/) | 社区支持好 |
 | 防xss | [js-xss](https://github.com/leizongmin/js-xss)| [@chengbapi](https://github.com/chengbapi/) | 功能稳定、够用 |
 
-### Jquery
+### jQuery
 
 | 功能   | 名称 |  推荐人 | 推荐理由 |
 |--------|-------------|------|------|
