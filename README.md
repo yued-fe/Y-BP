@@ -33,9 +33,9 @@
 
 ## 无UI依赖组件库 「 YF 」
 
-| 功能   | 名称 |  推荐人 | 打分 | 推荐理由 |
-|--------|-------------|------|:------:|------|
-| 按钮 | [yf-button](https://github.com/yued-fe/yf-button)| [@ziven27](https://github.com/ziven27/) | 5 | 工程化思维的按钮组件，原生，REACT，VUE |
+| 功能   | 名称 |  推荐人 | 推荐理由 |
+|--------|-------------|------|------|
+| 按钮 | [yf-button](https://github.com/yued-fe/yf-button)| [@ziven27](https://github.com/ziven27/) | 工程化思维的按钮组件，原生，REACT，VUE |
 
 
 ## 插件推荐
