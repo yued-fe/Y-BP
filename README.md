@@ -35,7 +35,8 @@
 
 | 功能   | 名称 |  推荐人 | 推荐理由 |
 |--------|-------------|------|------|
-| 按钮 | [yf-button](https://github.com/yued-fe/yf-button)| [@ziven27](https://github.com/ziven27/) | 工程化思维的按钮组件，原生，REACT，VUE |
+| 按钮 | [yf-button](https://github.com/yued-fe/yf-button)| [@ziven27](https://github.com/ziven27/) | 无UI依赖 |
+| 弹窗 | [yf-dialog](https://github.com/yued-fe/yf-dialog)| [@ziven27](https://github.com/ziven27/) | 无UI依赖 |
 
 
 ## 插件推荐
