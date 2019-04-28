@@ -62,6 +62,7 @@
 | 功能   | 名称 |  推荐人 | 推荐理由 |
 |--------|-------------|------|------|
 | 轮播 | [vue-awesome-swiper](https://github.com/surmon-china/vue-awesome-swiper)| [@ziven27](https://github.com/ziven27/) | 星数多 |
+| 分页组件 | [vuejs-paginate](https://github.com/lokyoung/vuejs-paginate)| [@ziven27](https://github.com/ziven27/) | 星数多 |
 
 
 ### React
