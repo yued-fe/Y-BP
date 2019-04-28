@@ -58,6 +58,12 @@
 | UI组件库 | [LuLu UI Validate.js](https://l-ui.com/content/apis/validate.html)| [@zhangxinxu](https://github.com/zhangxinxu/) | 基于原生HTML5表单，语义更好，体验更佳，开发更简单 |
 
 
+### VUE
+| 功能   | 名称 |  推荐人 | 推荐理由 |
+|--------|-------------|------|------|
+| 轮播 | [vue-awesome-swiper](https://github.com/surmon-china/vue-awesome-swiper)| [@ziven27](https://github.com/ziven27/) | 星数多 |
+
+
 ### React
 
 | 功能   | 名称 |  推荐人 | 推荐理由 |
