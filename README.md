@@ -63,7 +63,7 @@
 |--------|-------------|------|------|
 | 轮播 | [vue-awesome-swiper](https://github.com/surmon-china/vue-awesome-swiper)| [@ziven27](https://github.com/ziven27/) | 星数多 |
 | 分页组件 | [vuejs-paginate](https://github.com/lokyoung/vuejs-paginate)| [@ziven27](https://github.com/ziven27/) | 星数多 |
-
+| 移动端手势 | [vue2-hammer](https://github.com/bsdfzzzy/vue2-hammer)| [@zhangxinxu](https://github.com/zhangxinxu/) | 最近更新，另外一个星数多但是最近没有更新 |
 
 ### React
 
