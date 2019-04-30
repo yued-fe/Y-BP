@@ -77,6 +77,7 @@
 | 路由 | [@reach/router](https://reach.tech/router)| [@ziven27](https://github.com/ziven27/) | react-router原作者重新做的一个插件 |
 | 移动端touch | [react-hammerjs](https://github.com/JedWatson/react-hammerjs)| [@ziven27](https://github.com/ziven27/) | 支持的事件丰富 |
 | 字体加载 | [webfontloader](https://github.com/typekit/webfontloader)| [@ziven27](https://github.com/ziven27/) | 动态加载google字体 |
+| 手指滑动 | [react-hammerjs](https://github.com/JedWatson/react-hammerjs)| [@zhangxinxu](https://github.com/zhangxinxu/) | 接口简单 |
 
 ## 插件diss
 
