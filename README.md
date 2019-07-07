@@ -55,7 +55,7 @@
 |--------|-------------|------|------|
 | 打标签 | [taggingJS](https://github.com/axios/axios)| [@ziven27](https://github.com/ziven27/) | 其它找到的几个的都有jquery ui的依赖 |
 | 表单校验 | [jqueryvalidation](https://jqueryvalidation.org/)| [@ziven27](https://github.com/ziven27/) | 功能强大，自定义性很高 |
-| UI组件库 | [LuLu UI Validate.js](https://l-ui.com/content/apis/validate.html)| [@zhangxinxu](https://github.com/zhangxinxu/) | 基于原生HTML5表单，语义更好，体验更佳，开发更简单 |
+| UI组件库 | [LuLu UI Validate.js](https://l-ui.com/content/apis/validate.html)| [@ziven27](https://github.com/ziven27/)| 基于原生HTML5表单，语义更好，体验更佳，开发更简单 |
 
 
 ### VUE
